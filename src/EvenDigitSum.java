@@ -15,7 +15,6 @@ public class EvenDigitSum {
         }
         int evenNumbers = 0;
 
-
         while (number > 0) {
 
             int checkEven = number % 10;  // to get numbers 1 - 10 in iteration form
