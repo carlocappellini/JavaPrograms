@@ -333,7 +333,7 @@ public class Car {
 
 // the code that is creating objects, cant make invalid objects, it can create in this case , it can't assign a model number that we haven't defined as being valid in our Car class
 
-// that's the whole concept of encapsulation is we are not allowing people to access the field directly by forcing in this case to assign the model using a method , e can really make sure the data within our objects are more valid and have been validated and are correct
+// that's the whole concept of encapsulation is we are not allowing people to access the field directly by forcing in this case to assign the model using a method , we can really make sure the data within our objects are more valid and have been validated and are correct
 
 
 
