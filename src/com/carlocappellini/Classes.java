@@ -5,7 +5,8 @@ public class Classes {
 
 
     //Objects major characteristics = state and behavior
-    //Btate in terms of computer, might be the amount of ram it has the operating system is running, the hard drive size, the size of thr monitor etc
+    //
+    // State in terms of computer, might be the amount of ram it has the operating system is running, the hard drive size, the size of thr monitor etc
 
 
     //Behavior for computer might shutting down, not beeping or outputting some form fo sound, printing something ete
