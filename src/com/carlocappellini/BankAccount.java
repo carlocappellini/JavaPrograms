@@ -1,8 +1,10 @@
 package com.carlocappellini;
 
-import javax.xml.bind.SchemaOutputResolver;
 
 public class BankAccount {
+
+
+
 
 // wee are updating this fields by , accessing field with this.field_name
 
@@ -35,6 +37,8 @@ public class BankAccount {
 
 
         // THEN EMPTY CONSTRUCTOR IS CALLED
+
+
         this(12234, 2.50, "default name", "default  address","default phone" );
         System.out.println("empty constructor  called ");
     }
@@ -43,18 +47,63 @@ public class BankAccount {
     // This is now setting the field values in the constructor
     // We can now called this constructor and we will creating the object
 
+    // We shouldn't be calling other methods or even setters within the constructor code
+
+
+
     public BankAccount(int accountNumber, double balance, String name, String email, String phoneNumber) {
-
-
         System.out.println("Account constructor with parameters called");
+
+        //we could also do this
+     //   setAccountNumber(accountNumber);
+        // There is conflicting opinions on which is the best approach
+
+
+// we do all initialization in one constructor like below
+
+        //all other constructors should just call the major constructor
+
+        // we to save the field values directly rather than calling  setters or any other method, like this
+
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
+
+
+        //Rule of thumb is always better to save value of the constructor directly to the field rather than calling the setter
+
+        // going back and setting it to "this.whatever_field_name"  is, you're guaranteed that the field values will be initialized
+
+        // General rule of thumb with constructors is don't call setters or any other method other than another  constructor within those constructors
     }
 
 
+
+    // disadvantage of this constructor is that balance and account number haven't been updated
+
+    public BankAccount(String name, String email, String phoneNumber) {
+
+
+        //so what we could do is put "this" and we can assume that is going to be the default account number 99999 and the default balance is 100 , inside parenthesis of this()
+
+
+        // here we have defaulted two parameters
+
+        this(99999, 100.0,name,email,phoneNumber);
+
+        // we came up with what the default is because they weren't specified and then we went back and called our major constructor, that pne tha updates all the fields
+
+
+
+
+
+        // we can get rid of these
+//        this.name = name;
+//        this.email = email;
+//        this.phoneNumber = phoneNumber;
+    }
 
     public void setAccountNumber(int accountNumber) {
         this.accountNumber = accountNumber;

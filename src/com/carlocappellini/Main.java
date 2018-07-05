@@ -44,6 +44,14 @@ public class Main {
 
 //
 
+BankAccount carloAccount = new BankAccount("Carlo", "Cro@email.com","4234234234");
+        System.out.println(carloAccount.getPhoneNumber());
+
 
     }
+
 }
+
+
+
+
