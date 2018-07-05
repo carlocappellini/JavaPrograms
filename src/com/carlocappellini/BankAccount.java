@@ -52,6 +52,7 @@ public class BankAccount {
 
 
     public BankAccount(int accountNumber, double balance, String name, String email, String phoneNumber) {
+
         System.out.println("Account constructor with parameters called");
 
         //we could also do this
@@ -76,7 +77,7 @@ public class BankAccount {
 
         // going back and setting it to "this.whatever_field_name"  is, you're guaranteed that the field values will be initialized
 
-        // General rule of thumb with constructors is don't call setters or any other method other than another  constructor within those constructors
+        // General rule of thumb with constructors is don't call setters or any other me2thod other than another  constructor within those constructors
     }
 
 
@@ -156,15 +157,22 @@ public class BankAccount {
 
 
         //we use <0 instead if <=0 , just we can see when we go into the minus
-        if (this.balance - withdrawalAmount < 0) {
+        if (this.balance - withdrawalAmount  < 0) {
             System.out.println(withdrawalAmount + " unable to process , Only " + this.balance + " available ");
-        } else {
-            this.balance -= withdrawalAmount;
-            System.out.println("withdrawal of " + withdrawalAmount + " processed. Remaining balance = " + this.balance);
         }
 
 
-        System.out.println("withdrawal is " + withdrawalAmount + ", balance is now " + this.balance);
+
+        else {
+            this.balance -= withdrawalAmount;
+            System.out.println("withdrawal of " + withdrawalAmount + " processed. Remaining balance = " + this.balance);
+            if (this.balance - withdrawalAmount  < 25) {
+                System.out.println("balance below $25 , balance remaining " +this.balance);
+            }
+        }
+
+
+
     }
 
 
