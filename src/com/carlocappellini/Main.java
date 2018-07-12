@@ -1,5 +1,7 @@
 package com.carlocappellini;
 
+import com.sun.java.browser.plugin2.DOM;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -69,25 +71,28 @@ public class Main {
 
 //
 
-          BankAccount carloAccount = new BankAccount("Carlo", "Cro@email.com",                    "4234234234");
-        System.out.println(carloAccount.getPhoneNumber());
-        System.out.println("carlo's account balance is "+ carloAccount.getBalance());
-        carloAccount.withdrawal(79);
+//          BankAccount carloAccount = new BankAccount("Carlo", "Cro@email.com",                    "4234234234");
+//        System.out.println(carloAccount.getPhoneNumber());
+//        System.out.println("carlo's account balance is "+ carloAccount.getBalance());
+//        carloAccount.withdrawal(79);
+//
+//
+//        System.out.println(carloAccount.getBalance());
+//
+//        carloAccount.deposit(300);
+//        System.out.println(carloAccount.getBalance());
+//
+//        carloAccount.withdrawal(300);
+//
+//        carloAccount.withdrawal(21);
+//        carloAccount.deposit(26);
+//        carloAccount.withdrawal(2);
 
+Animal animal = new Animal("Animal", 1,1,5,5);
 
-        System.out.println(carloAccount.getBalance());
+        Dog dog = new Dog("Malti poo", 1,1,4,14,2,4,1,30,"furry");
 
-        carloAccount.deposit(300);
-        System.out.println(carloAccount.getBalance());
-
-        carloAccount.withdrawal(300);
-
-        carloAccount.withdrawal(21);
-        carloAccount.deposit(26);
-        carloAccount.withdrawal(2);
-
-
-
+        dog.eat();
 
 
     }
