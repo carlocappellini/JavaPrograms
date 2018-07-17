@@ -97,12 +97,17 @@ public class Main {
 
 //        dog.eat();
 //        dog.walk();
-        dog.run();
+//        dog.run();
 
+
+        Fish fish = new Fish("Nemo", 1,1,2,10,660);
+
+        fish.move(3);
+
+        }
     }
 
 
-}
 
 
 
