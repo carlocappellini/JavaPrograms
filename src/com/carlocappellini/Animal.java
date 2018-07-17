@@ -46,8 +46,10 @@ public class Animal {
 
     }
 
-    public void move(){
+    // we can accept a parameter for speed
 
+    public void move(int speed) {
+        System.out.println("Animal.move called() Animal is moving at " + speed);
     }
 
 

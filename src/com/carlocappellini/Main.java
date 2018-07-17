@@ -1,8 +1,11 @@
 package com.carlocappellini;
 
+
 import com.sun.java.browser.plugin2.DOM;
+import org.junit.Test;
 
 public class Main {
+
 
     public static void main(String[] args) {
 
@@ -88,12 +91,13 @@ public class Main {
 //        carloAccount.deposit(26);
 //        carloAccount.withdrawal(2);
 
-Animal animal = new Animal("Animal", 1,1,5,5);
+        Animal animal = new Animal("Animal", 1, 1, 5, 5);
 
-        Dog dog = new Dog("Malti poo", 1,1,4,14,2,4,1,30,"furry");
+        Dog dog = new Dog("Malti poo", 1, 1, 4, 14, 2, 4, 1, 30, "furry");
 
-        dog.eat();
-
+//        dog.eat();
+//        dog.walk();
+        dog.run();
 
     }
 
