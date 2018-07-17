@@ -37,7 +37,6 @@ package com.carlocappellini;
 //
 
 
-
 public class Dog extends Animal {
 
     //1
@@ -68,7 +67,6 @@ public class Dog extends Animal {
     // because we are in the Dog class we are creating a constructor for the Dog, we need to work with these extra parameters
 
 
-
     //4 we are going to say that all dogs have a brain and a body
 
     //so we can remove brain and body parameters
@@ -77,10 +75,8 @@ public class Dog extends Animal {
     // and we can pass number 1 on super for both
 
 
-
-// 5 well add the rest of the parameters
-    public Dog(String name, int brain, int body,int size, int weight, int eyes, int legs,int tail, int teeth, String coat){
-
+    // 5 well add the rest of the parameters
+    public Dog(String name, int brain, int body, int size, int weight, int eyes, int legs, int tail, int teeth, String coat) {
 
 
         //2
@@ -88,7 +84,7 @@ public class Dog extends Animal {
 
         //we know that all dogs have a brain and a body so we're not going to force define those
 
-        super(name, 1, 1,size,weight);
+        super(name, 1, 1, size, weight);
 //I've still initialized the animal class
 
 
@@ -106,7 +102,7 @@ public class Dog extends Animal {
 
 
     //this a unique Behavior for a Dog and is not publicly accessed like "public"
-    private void chew(){
+    private void chew() {
         System.out.println("Dog.chew called");
     }
 
@@ -117,7 +113,7 @@ public class Dog extends Animal {
 
     // we can put something to indicate that we are calling in here
     @Override
-    public void eat(){
+    public void eat() {
 
         System.out.println("Dog.eat was called");
 
@@ -129,7 +125,43 @@ public class Dog extends Animal {
         // and then we are going to use super.eat()
 
 
-
         super.eat();
     }
+
+//If we want to use the method from the super class we do it "super.move
+
+    public void walk() {
+        System.out.println("Dog.walk() called");
+        super.move(5);
+    }
+
+
+    // If there is only one method called move is our super class we can also just use 'move'
+
+
+    // If we want to make a move method that unique to the Dog class we would use
+    // @Override
+    //    public void move(int speed) {
+    //        System.out.println("Dog.move called() Animal is moving at " + speed);
+    //    }
+
+
+    public void run() {
+        System.out.println("Dog.run() called");
+        move(10
+        );
+    }
+
+    public void moveLegs(int speed){
+        System.out.println("Dog.legs() legs move at " + speed);
+
+    }
+
+    @Override
+    public void move(int speed) {
+        System.out.println("Dog.move called() Animal is moving at " + speed);
+        super.move(speed);
+        moveLegs(speed);
+    }
+
 }
