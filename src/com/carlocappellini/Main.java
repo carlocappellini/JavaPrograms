@@ -1,6 +1,7 @@
 package com.carlocappellini;
 
 
+
 import com.sun.java.browser.plugin2.DOM;
 import org.junit.Test;
 
@@ -105,9 +106,12 @@ public class Main {
 //        fish.move(3);
 
 
-
-
+Vehicle car = new Vehicle(4,4,5,"gray");
+car.moving(5);
+car.changingGears(9);
         }
+
+
     }
 
 
