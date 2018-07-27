@@ -91,18 +91,21 @@ public class Main {
 //        carloAccount.deposit(26);
 //        carloAccount.withdrawal(2);
 
-        Animal animal = new Animal("Animal", 1, 1, 5, 5);
-
-        Dog dog = new Dog("Malti poo", 1, 1, 4, 14, 2, 4, 1, 30, "furry");
+//        Animal animal = new Animal("Animal", 1, 1, 5, 5);
+//
+//        Dog dog = new Dog("Malti poo", 1, 1, 4, 14, 2, 4, 1, 30, "furry");
 
 //        dog.eat();
 //        dog.walk();
 //        dog.run();
 
 
-        Fish fish = new Fish("Nemo", 1,1,2,10,660);
+//        Fish fish = new Fish("Nemo", 1,1,2,10,660);
+//
+//        fish.move(3);
 
-        fish.move(3);
+
+
 
         }
     }
