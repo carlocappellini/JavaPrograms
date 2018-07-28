@@ -1,6 +1,7 @@
 package com.carlocappellini;
 
 
+
 import com.sun.java.browser.plugin2.DOM;
 import org.junit.Test;
 
@@ -91,20 +92,41 @@ public class Main {
 //        carloAccount.deposit(26);
 //        carloAccount.withdrawal(2);
 
-        Animal animal = new Animal("Animal", 1, 1, 5, 5);
-
-        Dog dog = new Dog("Malti poo", 1, 1, 4, 14, 2, 4, 1, 30, "furry");
+//        Animal animal = new Animal("Animal", 1, 1, 5, 5);
+//
+//        Dog dog = new Dog("Malti poo", 1, 1, 4, 14, 2, 4, 1, 30, "furry");
 
 //        dog.eat();
 //        dog.walk();
 //        dog.run();
 
 
-        Fish fish = new Fish("Nemo", 1,1,2,10,660);
+//        Fish fish = new Fish("Nemo", 1,1,2,10,660);
+//
+//        fish.move(3);
 
-        fish.move(3);
+
+//Vehicle car = new Vehicle(4,4,5,"gray");
+//car.moving(5);
+//car.changingGears(9);
+
+//Car2 car2 = new Car2(4,6,"red");
+//car2.velocity(50,5);
+
+
+
+FastCar lambo = new FastCar(4, 4, "Orange", 230, true, "Spider");
+
+
+lambo.velocity(6);
+
+//        Car2 car3 = new Car2(3,2,6,"Black");
+//
+//        System.out.println(car3);
 
         }
+
+
     }
 
 
