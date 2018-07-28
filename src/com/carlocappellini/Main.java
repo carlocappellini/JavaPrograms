@@ -106,9 +106,24 @@ public class Main {
 //        fish.move(3);
 
 
-Vehicle car = new Vehicle(4,4,5,"gray");
-car.moving(5);
-car.changingGears(9);
+//Vehicle car = new Vehicle(4,4,5,"gray");
+//car.moving(5);
+//car.changingGears(9);
+
+//Car2 car2 = new Car2(4,6,"red");
+//car2.velocity(50,5);
+
+
+
+FastCar lambo = new FastCar(4, 4, "Orange", 230, true, "Spider");
+
+
+lambo.velocity(6);
+
+//        Car2 car3 = new Car2(3,2,6,"Black");
+//
+//        System.out.println(car3);
+
         }
 
 
