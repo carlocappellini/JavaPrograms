@@ -114,11 +114,17 @@ public class Main {
 //car2.velocity(50,5);
 
 
+//
+//FastCar lambo = new FastCar(4, 4, "Orange", 230, true, "Spider");
+//
+//
+//lambo.velocity(6);
 
-FastCar lambo = new FastCar(4, 4, "Orange", 230, true, "Spider");
-
-
-lambo.velocity(6);
+        Ferrari ferrari =new Ferrari(12);
+ferrari.steer(45);
+        ferrari.accelarate(30);
+        ferrari.accelarate(50);
+        ferrari.accelarate(-50);
 
 //        Car2 car3 = new Car2(3,2,6,"Black");
 //
