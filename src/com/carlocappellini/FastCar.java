@@ -48,7 +48,7 @@ public class FastCar extends Car2 {
     }
 
 
-    public void velocity( int gear) {
+    public void velocity(int gear) {
         switch (gear){
 
             case 1:
