@@ -21,6 +21,7 @@ public class PC {
         return monitor;
     }
 
+
     private Motherboard getMotherBoard() {
         return motherBoard;
     }
