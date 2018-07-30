@@ -13,6 +13,12 @@ public class PC {
     }
 
 
+    public void powerUp(){
+        getTheCase().pressPowerButton();
+        getMotherBoard().loadProgram("IOSX");
+        monitor.drawPixelAt(20,20, "Red" );
+    }
+
     private Case getTheCase() {
         return theCase;
     }
