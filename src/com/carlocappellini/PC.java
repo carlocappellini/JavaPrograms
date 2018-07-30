@@ -14,17 +14,13 @@ public class PC {
 
 
     public void powerUp(){
-        getTheCase().pressPowerButton();
+        theCase.pressPowerButton();
         drawLogo();
     }
 
     private void drawLogo(){
         monitor.drawPixelAt(20,20,"red");
 
-    }
-
-    private Case getTheCase() {
-        return theCase;
     }
 
 
