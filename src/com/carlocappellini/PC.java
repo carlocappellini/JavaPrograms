@@ -38,6 +38,9 @@ Motherboard motherboard = new Motherboard("BJ-200", "Asus",4, 6,"v2.44" );
         PC thePC = new PC(theCase,monitor, motherboard);
 
         thePC.getMonitor().drawPixelAt(3,5,"green");
+        thePC.getMotherBoard().loadProgram("Apple IOSX");
+
+        thePC.getTheCase().pressPowerButton();
     }
 
 }
