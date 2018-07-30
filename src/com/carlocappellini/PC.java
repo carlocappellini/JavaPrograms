@@ -36,6 +36,7 @@ Monitor monitor = new Monitor("27 inch Beast" , " Apple", 27, new Resolution(250
 //        new Resolution(2500, 1440) that creates an instance of a class without using a variable
 Motherboard motherboard = new Motherboard("BJ-200", "Asus",4, 6,"v2.44" );
     }
+    PC thePC = new PC(theCase,monitor, motherBoard);
 
 }
 
