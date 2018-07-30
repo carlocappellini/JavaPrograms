@@ -13,25 +13,17 @@ public class PC {
     }
 
 
-    public void powerUp(){
+    public void powerUp() {
         theCase.pressPowerButton();
+        motherBoard.loadProgram("IOSX");
         drawLogo();
     }
 
-    private void drawLogo(){
-        monitor.drawPixelAt(20,20,"red");
+    private void drawLogo() {
+        monitor.drawPixelAt(20, 20, "red");
 
     }
 
-
-
-
-
-
-    public static void main(String[] args) {
-
-
-    }
 
 }
 
