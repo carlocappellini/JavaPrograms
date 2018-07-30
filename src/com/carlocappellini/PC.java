@@ -15,20 +15,18 @@ public class PC {
 
     public void powerUp(){
         getTheCase().pressPowerButton();
+        drawLogo();
+    }
+
+    private void drawLogo(){
+        monitor.drawPixelAt(20,20,"red");
+
     }
 
     private Case getTheCase() {
         return theCase;
     }
 
-    private Monitor getMonitor() {
-        return monitor;
-    }
-
-
-    private Motherboard getMotherBoard() {
-        return motherBoard;
-    }
 
 
 
