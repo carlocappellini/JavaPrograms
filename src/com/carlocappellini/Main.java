@@ -120,16 +120,24 @@ public class Main {
 //
 //lambo.velocity(6);
 
-        Ferrari ferrari =new Ferrari(12);
-ferrari.steer(45);
-        ferrari.accelarate(30);
-        ferrari.accelarate(50);
-        ferrari.accelarate(-50);
+//        Ferrari ferrari =new Ferrari(12);
+//ferrari.steer(45);
+//        ferrari.accelarate(30);
+//        ferrari.accelarate(50);
+//        ferrari.accelarate(-50);
 
 //        Car2 car3 = new Car2(3,2,6,"Black");
 //
 //        System.out.println(car3);
+        Dimensions dimensions = new Dimensions(20,20,5);
+        Case theCase = new Case("220B", " dell", "240", dimensions);
+        Monitor monitor = new Monitor("27 inch Beast" , " Apple", 27, new Resolution(2500, 1440));
+//        new Resolution(2500, 1440) that creates an instance of a class without using a variable
+        Motherboard motherboard = new Motherboard("BJ-200", "Asus",4, 6,"v2.44" );
+        PC thePC = new PC(theCase,monitor, motherboard);
 
+
+        thePC.powerUp();
         }
 
 
