@@ -150,8 +150,9 @@ public class Main {
         WallFrame wallFrame = new WallFrame(200, 100, true, "Gold", "Dracula");
 
 
-        Room room = new Room(television, table, bookShelf, couch, wallFrame);
+        Room room = new Room("Carlo' Room",television, table, bookShelf, couch, wallFrame);
 
+        System.out.println(room.getName());
         room.imHere();
 
       }

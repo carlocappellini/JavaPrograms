@@ -1,8 +1,12 @@
 package com.carlocappellini;
 
+import com.sun.xml.internal.ws.api.ha.StickyFeature;
 import sun.tools.jconsole.Tab;
 
 public class Room {
+
+
+    private String name;
     private Television television;
     private Enhancement enhancement;
     private Table table;
@@ -10,6 +14,9 @@ public class Room {
     private Couch couch;
     private WallFrame wallFrame;
 
+    public String getName() {
+        return name;
+    }
     public Television getTelevision() {
         return television;
     }
@@ -34,7 +41,8 @@ public class Room {
         return wallFrame;
     }
 
-    public Room(Television television, Table table, BookShelf bookShelf, Couch couch, WallFrame wallFrame) {
+    public Room(String name, Television television, Table table, BookShelf bookShelf, Couch couch, WallFrame wallFrame) {
+        this.name = name;
         this.television = television;
         this.table = table;
         this.bookShelf = bookShelf;
