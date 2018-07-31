@@ -129,16 +129,32 @@ public class Main {
 //        Car2 car3 = new Car2(3,2,6,"Black");
 //
 //        System.out.println(car3);
-        Dimensions dimensions = new Dimensions(20,20,5);
-        Case theCase = new Case("220B", " dell", "240", dimensions);
-        Monitor monitor = new Monitor("27 inch Beast" , " Apple", 27, new Resolution(2500, 1440));
-//        new Resolution(2500, 1440) that creates an instance of a class without using a variable
-        Motherboard motherboard = new Motherboard("BJ-200", "Asus",4, 6,"v2.44" );
-        PC thePC = new PC(theCase,monitor, motherboard);
+//        Dimensions dimensions = new Dimensions(20,20,5);
+//        Case theCase = new Case("220B", " dell", "240", dimensions);
+//        Monitor monitor = new Monitor("27 inch Beast" , " Apple", 27, new Resolution(2500, 1440));
+////        new Resolution(2500, 1440) that creates an instance of a class without using a variable
+//        Motherboard motherboard = new Motherboard("BJ-200", "Asus",4, 6,"v2.44" );
+//        PC thePC = new PC(theCase,monitor, motherboard);
+//
+//
+//        thePC.powerUp();
 
 
-        thePC.powerUp();
-        }
+        Television television = new Television(2,"metallic",new Resolution(100,80),new Enhancement(2080,true));
+
+        Table table = new Table("Octagon",4,"Wood");
+        BookShelf bookShelf = new BookShelf(50,new Dimensions(100,200,50));
+
+        Couch couch = new Couch("Leather", 6, "Black");
+
+        WallFrame wallFrame = new WallFrame(200, 100, true, "Gold", "Dracula");
+
+
+        Room room = new Room(television, table, bookShelf, couch, wallFrame);
+
+        room.imHere();
+
+      }
 
 
     }
