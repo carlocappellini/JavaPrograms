@@ -140,21 +140,30 @@ public class Main {
 //        thePC.powerUp();
 
 
-        Television television = new Television(2,"metallic",new Resolution(100,80),new Enhancement(2080,true));
+//        Television television = new Television(2,"metallic",new Resolution(100,80),new Enhancement(2080,true));
+//
+//        Table table = new Table("Octagon",4,"Wood");
+//        BookShelf bookShelf = new BookShelf(50,new Dimensions(100,200,50));
+//
+//        Couch couch = new Couch("Leather", 6, "Black");
+//
+//        WallFrame wallFrame = new WallFrame(200, 100, true, "Gold", "Dracula");
+//
+//
+//        Room room = new Room("Carlo' Room",television, table, bookShelf, couch, wallFrame);
+//
+//        System.out.println(room.getName());
+//        room.imHere();
 
-        Table table = new Table("Octagon",4,"Wood");
-        BookShelf bookShelf = new BookShelf(50,new Dimensions(100,200,50));
-
-        Couch couch = new Couch("Leather", 6, "Black");
-
-        WallFrame wallFrame = new WallFrame(200, 100, true, "Gold", "Dracula");
 
 
-        Room room = new Room("Carlo' Room",television, table, bookShelf, couch, wallFrame);
 
-        System.out.println(room.getName());
-        room.imHere();
+        SuperHeroPlayer superHeroPlayer = new SuperHeroPlayer("Carlo", "AXE", "Fire", 100);
 
+        superHeroPlayer.takeDamage(100);
+        superHeroPlayer.eatRation();
+
+        superHeroPlayer.maxRage();
       }
 
 
