@@ -32,37 +32,68 @@ public class SuperHeroPlayer {
         }
     }
 
-    public void takeDamage(int damage) {
-        this.health = this.health - damage;
-        if (this.health == 0) {
-            System.out.println("player Knockout");
-        }
+    public void takeEnemyDamage(int enemyDamage) {
+
+
+        this.health = this.health - enemyDamage;
         System.out.println(this.health);
+        if (this.health == 10) {
+            powerUpWhenHealthIsLow();
+        }
+        else if (this.health % 10 == 0 && this.health == 0) {
+            System.out.println("player Knockout, health = " + this.health);
+
+        } else {
+            System.out.println("damage taken " + enemyDamage + " health remaining " + this.health);
+        }
+
+
+    }
+
+    private void powerUpWhenHealthIsLow() {
+        int extraTempLife = 500;
+        int powerUpSeconds = 15;
+
+        powerUp();
+        this.health = this.health + extraTempLife;
+        System.out.println("Temporary health reached " + this.health);
+
+        for (int i = 0; i != powerUpSeconds; i++) {
+            System.out.println(i);
+        }
+        System.out.println(powerUpSeconds + " reached");
+        this.health = 10;
+        System.out.println("back to normal " + this.health);
+
+
     }
 
 
-    private void lifeUp(int health) {
+    private void lifeUp() {
+        System.out.println("Health went up");
+        System.out.println(this.health);
 
-        if (this.health > 0 && this.health <= 100) {
-            this.health = health;
-            System.out.println("Health went up");
-        }
     }
 
     public void eatRation() {
-
         int ration = 50;
+        System.out.println("eating Ration +" +ration);
         this.health = this.health + ration;
-
-        System.out.println("eating Ration");
-        lifeUp(ration);
-        System.out.println(health);
+        lifeUp();
     }
 
-    public boolean maxRage() {
+    public boolean maxRage(boolean rage) {
         int maxRage = 1000;
-        System.out.println("MAX RAGE REACHED" + maxRage + "  !!!!!! GRRR USING " + weapon + " TO DESTROY ");
-        return true;
+        System.out.println("MAX RAGE REACHED " + maxRage + "  !!!!!! GRRR USING " + weapon + " TO DESTROY ");
+        return rage;
+
+
+    }
+
+    public void powerUp() {
+        System.out.println("Power up Activated");
+        maxRage(true);
+
 
     }
 
@@ -70,12 +101,12 @@ public class SuperHeroPlayer {
     private void shootFire(int fire) {
 
         int count = 0;
-        while (fire > 5){
-            count ++;
+        while (fire > 5) {
+            count++;
             System.out.println("Shooting " + count + " fireballs");
             break;
         }
-        if (maxRage()){
+        if (maxRage(true)) {
             System.out.println("SUPER FIREBALL CREATED");
 
         }
@@ -83,7 +114,7 @@ public class SuperHeroPlayer {
 
     private void lowHealth() {
         if (this.health <= 10) {
-            maxRage();
+            maxRage(true);
 
 
         }
