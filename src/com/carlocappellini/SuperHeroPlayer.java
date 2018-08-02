@@ -8,8 +8,19 @@ public class SuperHeroPlayer {
     private int health = 100;
     private int rageMeter = 0;
 
+
     public SuperHeroPlayer(int rageMeter) {
         this.rageMeter = rageMeter;
+    }
+
+
+    public SuperHeroPlayer(String name, String weapon, String superPower, int health) {
+        this.name = name;
+        this.weapon = weapon;
+        this.superPower = superPower;
+        if (health > 0 && health <= 100) {
+            this.health = health;
+        }
     }
 
     public int getRageMeter() {
@@ -27,25 +38,12 @@ public class SuperHeroPlayer {
     public String getSuperPower() {
         return superPower;
     }
-//
-//    public int getHealth() {
-//        return health;
-//    }
-
 
     public void getHealth() {
 
         System.out.println(health);
     }
 
-    public SuperHeroPlayer(String name, String weapon, String superPower, int health) {
-        this.name = name;
-        this.weapon = weapon;
-        this.superPower = superPower;
-        if (health > 0 && health <= 100) {
-            this.health = health;
-        }
-    }
 
     public void takeEnemyDamage(int enemyDamage) {
         this.health = health - enemyDamage;
