@@ -160,13 +160,21 @@ public class Main {
 
         SuperHeroPlayer superHeroPlayer = new SuperHeroPlayer("Carlo", "AXE", "Fire", 100);
 
-        superHeroPlayer.takeEnemyDamage(30);
-superHeroPlayer.eatRation();
+
+        superHeroPlayer.getHealth();
+        superHeroPlayer.takeEnemyDamage(90);
+        superHeroPlayer.shootFire(5);
 
 
 
 
-      }
+
+
+
+
+
+
+    }
 
 
     }
