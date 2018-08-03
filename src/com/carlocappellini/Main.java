@@ -156,17 +156,21 @@ public class Main {
 //        room.imHere();
 
 
+//
 
 
-        SuperHeroPlayer superHeroPlayer = new SuperHeroPlayer("Carlo", "AXE", "Fire", 100);
+//
+//        SuperHeroPlayer superHeroPlayer = new SuperHeroPlayer("Carlo", "AXE", "Fire", 100);
+//
+//
+//        superHeroPlayer.getHealth();
+//        superHeroPlayer.takeEnemyDamage(90);
+//        superHeroPlayer.shootFire(5);
+
+Printer printer = new Printer(100,true);
 
 
-        superHeroPlayer.getHealth();
-        superHeroPlayer.takeEnemyDamage(90);
-        superHeroPlayer.shootFire(5);
-
-
-
+printer.printPaper(3);
 
 
 
