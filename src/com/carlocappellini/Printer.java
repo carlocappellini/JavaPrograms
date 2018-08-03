@@ -4,13 +4,18 @@ public class Printer {
     private double tonerLevel = 100;
 
     private int numberOfPAgesToPrint;
+
+    public Printer(boolean isDuplex) {
+        this.isDuplex = isDuplex;
+    }
+
     private boolean isDuplex;
 
-    public Printer(int tonerLevel, int numberOfPAgesToPrint, boolean isDuplex) {
-        if (tonerLevel == 100) {
+    public Printer(int tonerLevel, boolean isDuplex) {
+        if (tonerLevel >0 && tonerLevel <= 100) {
             this.tonerLevel = tonerLevel;
         }
-        this.numberOfPAgesToPrint = numberOfPAgesToPrint;
+        this.numberOfPAgesToPrint = 0;
         this.isDuplex = isDuplex;
     }
 
@@ -27,40 +32,77 @@ public class Printer {
     }
 
     public void printPaper(int copies){
+        int pagesToPrint = copies;
         int tonerUsed = 5;
-        if (copies > 0){
-            System.out.println("printing....");
-            for (int i = 1; i <= copies; i++){
-                this.tonerLevel = this.tonerLevel - tonerUsed;
-                System.out.println(i + " copies printed");
-            }
-            System.out.println("toner is at " + this.tonerLevel);
-            checkIfEmpty();
+
+        if(copies > 1 && this.tonerLevel == 0){
+            System.out.println("not enough toner to print");
         }
+            else if (copies > 0 &&  this.tonerLevel > 0 && this.tonerLevel <=100){
+                System.out.println("printing....");
+                for (int i = 1; i <= copies; i++) {
+                    this.tonerLevel = tonerLevel - tonerUsed;
+                    System.out.println("copy number " + i + " printed");
+                    if (this.tonerLevel / 5 ==0 ) {
+                        System.out.println("automatic refill at 0");
+                        checkIfEmpty();
+                        break;
+                    }
+
+
+                }
+                System.out.println(this.tonerLevel);
+
+
+
+
+            }
+
+
+
+
+
 
     }
 
-    public void tonerRefill() {
+    private void tonerRefill() {
         int inkCartridge = 100;
         int disposeOlfCartridge = 0;
         System.out.println("disposing cartridge");
         this.tonerLevel = this.tonerLevel + disposeOlfCartridge;
-        System.out.println("cartridge disposed ink level at " + this.tonerLevel);
+        System.out.println("cartridge disposed toner level at " + this.tonerLevel);
         this.tonerLevel = this.tonerLevel + inkCartridge;
-        System.out.println("cartridge changed ink is full " + this.tonerLevel );
+        System.out.println("cartridge changed toner is full " + this.tonerLevel );
 
     }
 
-    public boolean checkIfEmpty() {
-        if (this.tonerLevel == 100) {
-            System.out.println("ink is full");
-        } else if (this.tonerLevel <= 20){
-            System.out.println("Ink is at " + this.tonerLevel);
-        } else {
+    private boolean checkIfEmpty() {
+        if (this.tonerLevel == 0){
+            System.out.println("Printer is out of toner  " + this.tonerLevel);
             tonerRefill();
+        } else if (this.tonerLevel == 100) {
+
+            System.out.println("Printer is full with toner");
+        }
+        else if (this.tonerLevel <=20 || this.tonerLevel>0){
+            System.out.println("Printer will require toner soon, has " +  (this.tonerLevel / 5) + " prints left");
+        }
+        else {
+            System.out.println("Printer has " + this.tonerLevel+ " toner left");
         }
         return true;
     }
+    public void isDuplexPrinter(int pages){
+        int pagesToPrint  = pages ;
+        if (this.isDuplex){
+            pagesToPrint = (pages /2) + (pages %2);
+
+            System.out.println(pagesToPrint);
+        }
+
+    }
+
+
 
 }
 

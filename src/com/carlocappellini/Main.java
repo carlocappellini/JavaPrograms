@@ -167,14 +167,15 @@ public class Main {
 //        superHeroPlayer.takeEnemyDamage(90);
 //        superHeroPlayer.shootFire(5);
 
-Printer printer = new Printer(100,5,true);
+Printer printer = new Printer(100,true);
 
-printer.checkIfEmpty();
+Printer printer2  = new Printer(true);
 
-printer.printPaper(5);
-printer.printPaper(10);
+printer2.isDuplexPrinter(3);
 
-printer.printPaper(2);
+
+
+
     }
 
 
