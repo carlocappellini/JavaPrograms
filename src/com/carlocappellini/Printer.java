@@ -35,6 +35,12 @@ public class Printer {
         int pagesToPrint = copies;
         int tonerUsed = 5;
 
+//        if (this.isDuplex){
+//            pagesToPrint = (copies /2) + (copies %2);
+//
+//            System.out.println(pagesToPrint);
+//        }
+
         if(copies > 1 && this.tonerLevel == 0){
             System.out.println("not enough toner to print");
         }
@@ -92,15 +98,7 @@ public class Printer {
         }
         return true;
     }
-    public void isDuplexPrinter(int pages){
-        int pagesToPrint  = pages ;
-        if (this.isDuplex){
-            pagesToPrint = (pages /2) + (pages %2);
 
-            System.out.println(pagesToPrint);
-        }
-
-    }
 
 
 

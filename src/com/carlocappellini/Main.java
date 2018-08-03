@@ -169,9 +169,8 @@ public class Main {
 
 Printer printer = new Printer(100,true);
 
-Printer printer2  = new Printer(true);
 
-printer2.isDuplexPrinter(3);
+printer.printPaper(3);
 
 
 
