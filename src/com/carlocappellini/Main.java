@@ -170,7 +170,7 @@ public class Main {
 Printer printer = new Printer(100,true);
 
 
-printer.printPaper(3);
+printer.printPaper(20);
 
 
 
