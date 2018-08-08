@@ -82,7 +82,7 @@ public class Arrays {
 
 int [] sorted = sortArray(q);
 
-        printArray(sorted)
+        printArray(sorted);
     }
 }
 
