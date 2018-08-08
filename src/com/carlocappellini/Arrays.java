@@ -1,27 +1,66 @@
 package com.carlocappellini;
 
+import java.util.Scanner;
+
 public class Arrays {
 
-    static int  [] arr = new int [10];
-    static int [] arrayToSort = new int[] {106,81,26,15,5};
+    private static Scanner scanner = new Scanner(System.in);
 
 
 
 
+private static int[] getIntegers(int array){
 
-    public  static int array(int[] array){
-        for (int i = 0;i < array.length; i ++){
-    //            i`
+    int [] arr = new int[array];
 
+    System.out.println("Enter " + array + " numbers");
+
+    for (int i =0; i < array; i++){
+        arr[i] = scanner.nextInt();
+    }
+
+    for (int i = 0; i< array; i++){
+        System.out.println("number are " + arr[i]);
+    }
+return arr;
+
+}
+
+
+    private static int printArray (int[] array){
+
+
+
+        for (int i = 0; i < array.length; i ++){
+            System.out.println(array[i]);
         }
         return array.length;
+    }
 
+    private static int[] sortArray(int [] array){
+    int [] arr = new int[array.length];
+
+    for (int i = 0;i < array.length; i++){
+        System.out.println("value is " + array[i]);
+        arr[i] = array[i];
     }
 
 
 
+
+
+    return arr;
+    }
+
+
     public static void main(String[] args) {
-array(arrayToSort);
+
+    int [] ints = {4,5,34,5423,4};
+
+//    int [] q = getIntegers(5);
+
+
+    printArray(ints);
     }
 }
 
