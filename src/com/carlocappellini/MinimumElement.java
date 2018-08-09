@@ -37,15 +37,15 @@ public class MinimumElement {
         int minValue = arr[0];
 
             for (int i = 0; i < arr.length; i++) {
-
                 if (arr[i] <= minValue ){
+//                    System.out.println("if " +arr[i]+"is less than " + minValue);
                     minValue = arr[i];
                 }
 
             }
 
 
-        System.out.println(minValue);
+        System.out.println("min number is "+minValue);
 
         return arr[minValue];
 
@@ -55,13 +55,16 @@ public class MinimumElement {
 
     public static void main(String[] args) {
 
-//        int[] read = readIntegers(3);
+        int[] read = readIntegers(3);
 
 
-        int[] arr = {6,9};
 
 
-        int findMin2 = findMin(arr);
+        int findMin2 = findMin(read);
+
+
+
+
 
 
 
