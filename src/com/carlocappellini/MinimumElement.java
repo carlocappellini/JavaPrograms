@@ -13,7 +13,7 @@ public class MinimumElement {
         int[] output = new int[count];
         int[] array = new int[output.length];
 
-        int sum=0;
+        int sum = 0;
 
 
         System.out.println("enter " + numbersEntered + " numbers");
@@ -30,12 +30,39 @@ public class MinimumElement {
 
 
         return output;
+
+    }
+
+    public static int findMin(int[] arr) {
+        int minValue = arr[0];
+
+            for (int i = 0; i < arr.length; i++) {
+
+                if (arr[i] <= minValue ){
+                    minValue = arr[i];
+                }
+
+            }
+
+
+        System.out.println(minValue);
+
+        return arr[minValue];
+
+
     }
 
 
     public static void main(String[] args) {
 
-        int[] read = readIntegers(3);
+//        int[] read = readIntegers(3);
+
+
+        int[] arr = {6,9};
+
+
+        int findMin2 = findMin(arr);
+
 
 
     }
