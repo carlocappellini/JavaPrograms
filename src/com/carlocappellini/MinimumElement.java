@@ -1,24 +1,32 @@
 package com.carlocappellini;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MinimumElement {
 
-    static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
+
+    static int[] readIntegers(int count) {
+
+        int numbersEntered = count;
+        int[] output = new int[count];
+        int[] array = new int[output.length];
+
+        int sum=0;
 
 
-    public static int[] readIntegers(int count){
-        int []output = new int[count];
-        System.out.println("enter " + count + " numbers");
+        System.out.println("enter " + numbersEntered + " numbers");
 
-for (int i =0; i < output.length; i++){
-    output[i] = scanner.nextInt();
+        for (int i = 0; i < output.length; i++) {
+            output[i] = scanner.nextInt();
+        }
 
-}
-for (int i =0; i<output.length; i++){
-    System.out.println("values are " + output[i]);
-}
-        System.out.println(output[count]);
+        for (int i = 0; i < output.length; i++) {
+            System.out.println("values are " + output[i]);
+        }
+
+        System.out.println(Arrays.toString(output));
 
 
         return output;
@@ -27,10 +35,10 @@ for (int i =0; i<output.length; i++){
 
     public static void main(String[] args) {
 
-int [] read = readIntegers(4);
+        int[] read = readIntegers(3);
+
 
     }
-
 
 
 }
