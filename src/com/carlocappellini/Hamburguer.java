@@ -9,8 +9,8 @@ public class Hamburguer {
     private String oneItem;
     private double oneItemPrice;
 
-    private String twoItemm;
-    private double TwoItemPrice;
+    private String twoItem;
+    private double twoItemPrice;
 
     private String threeItem;
     private double threeItemPrice;
@@ -42,12 +42,12 @@ public class Hamburguer {
         return oneItemPrice;
     }
 
-    public String getTwoItemm() {
-        return twoItemm;
+    public String getTwoItem() {
+        return twoItem;
     }
 
     public double getTwoItemPrice() {
-        return TwoItemPrice;
+        return twoItemPrice;
     }
 
     public String getThreeItem() {
@@ -73,23 +73,56 @@ public class Hamburguer {
         this.price = price;
     }
 
-    public void addOneItem(String name, double price){
+    public void addOneItem(String name, double price) {
         this.oneItem = name;
         this.oneItemPrice = price;
     }
-    public void addTwoItem(String name, double price){
-        this.twoItemm = name;
-        this.TwoItemPrice = price;
+
+    public void addTwoItem(String name, double price) {
+        this.twoItem = name;
+        this.twoItemPrice = price;
     }
-    public void addThreeItem(String name, double price){
+
+    public void addThreeItem(String name, double price) {
         this.threeItem = name;
         this.threeItemPrice = price;
     }
-    public void addFourItem(String name, double price){
+
+    public void addFourItem(String name, double price) {
         this.fourItem = name;
         this.fourItemPrice = price;
     }
 
+
+    public double burgerTotal() {
+        double price = this.price;
+
+        System.out.println("bUrgEr is " + price);
+
+        if (this.oneItem != null) {
+            price += this.oneItemPrice;
+            System.out.println("added " + this.oneItem + " for " + this.oneItemPrice);
+
+        }
+        if (this.twoItem != null) {
+            price += this.twoItemPrice;
+            System.out.println("added " + this.twoItem + " for " + this.twoItemPrice);
+
+        }
+
+        if (this.threeItem != null) {
+            price += this.threeItemPrice;
+
+            System.out.println("added " + this.threeItem + " for " + this.threeItemPrice);
+        }
+        if (this.fourItem != null) {
+            price += this.fourItemPrice;
+            System.out.println("added " + this.fourItem + " for " + this.fourItemPrice);
+        }
+        System.out.println(price);
+        return price;
+
+    }
 
 
 }

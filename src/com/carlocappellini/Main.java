@@ -167,13 +167,22 @@ public class Main {
 //        superHeroPlayer.takeEnemyDamage(90);
 //        superHeroPlayer.shootFire(5);
 
-Printer printer = new Printer(100,true);
+//Printer printer = new Printer(100,true);
+//
+//
+//printer.printPaper(20);
 
 
-printer.printPaper(20);
+        Hamburguer hamburguer = new Hamburguer("double","bun","horse",5.50);
+
+
+        double price =       hamburguer.burgerTotal();
 
 
 
+        hamburguer.addOneItem("fries", 2);
+
+        hamburguer.burgerTotal();
 
     }
 
