@@ -1,10 +1,6 @@
 package com.carlocappellini;
 
 
-
-import com.sun.java.browser.plugin2.DOM;
-import org.junit.Test;
-
 public class Main {
 
 
@@ -167,18 +163,32 @@ public class Main {
 //        superHeroPlayer.takeEnemyDamage(90);
 //        superHeroPlayer.shootFire(5);
 
-Printer printer = new Printer(100,true);
+//Printer printer = new Printer(100,true);
+//
+//
+//printer.printPaper(20);
 
 
-printer.printPaper(20);
+        Hamburger hamburger = new Hamburger("bun", "horse", 5.50);
+
+        hamburger.burgerTotal();
+        HealthyBurger healthyBurger = new HealthyBurger("turtle", 3.58);
+
+        healthyBurger.addHealthyItem1("frijoles", 3.5);
+        healthyBurger.addHealthyItem2("frijoles", 3.5);
+
+        healthyBurger.healthyBurgerTotal();
+
+        System.out.println(healthyBurger.getName());
+DeluxeBurger deluxeBurger = new DeluxeBurger("white","donkey",5.75);
 
 
-
+deluxeBurger.total();
 
     }
 
 
-    }
+}
 
 
 
