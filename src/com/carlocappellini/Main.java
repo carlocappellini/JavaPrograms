@@ -1,6 +1,8 @@
 package com.carlocappellini;
 
 
+
+
 public class Main {
 
 
@@ -169,21 +171,49 @@ public class Main {
 //printer.printPaper(20);
 
 
-        Hamburger hamburger = new Hamburger("bun", "horse", 5.50);
+//        Hamburger hamburger = new Hamburger("bun", "horse", 5.50);
+//
+//        hamburger.burgerTotal();
+//        HealthyBurger healthyBurger = new HealthyBurger("turtle", 3.58);
+//
+//        healthyBurger.addHealthyItem1("frijoles", 3.5);
+//        healthyBurger.addHealthyItem2("frijoles", 3.5);
+//
+//        healthyBurger.healthyBurgerTotal();
+//
+//        System.out.println(healthyBurger.getName());
+//DeluxeBurger deluxeBurger = new DeluxeBurger("white","donkey",5.75);
+//
+//
+//deluxeBurger.total();
 
-        hamburger.burgerTotal();
-        HealthyBurger healthyBurger = new HealthyBurger("turtle", 3.58);
-
-        healthyBurger.addHealthyItem1("frijoles", 3.5);
-        healthyBurger.addHealthyItem2("frijoles", 3.5);
-
-        healthyBurger.healthyBurgerTotal();
-
-        System.out.println(healthyBurger.getName());
-DeluxeBurger deluxeBurger = new DeluxeBurger("white","donkey",5.75);
 
 
-deluxeBurger.total();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
