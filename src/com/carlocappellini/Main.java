@@ -101,7 +101,7 @@ public class Main {
             System.out.println("Contact not found");
 
         } else{
-            System.out.println("found " + searchedContact.getName() + searchedContact.getPhoneNumber());
+            System.out.println("found " + searchedContact.getName()+ " " + searchedContact.getPhoneNumber());
 
         }
 

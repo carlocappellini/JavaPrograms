@@ -17,8 +17,6 @@ public class MobilePhone {
     }
 
 
-
-
     public boolean searchContact(Contact search) {
         if (myContacts.contains(search)) {
             System.out.println("Contact Found " + search + search.getPhoneNumber());
@@ -69,13 +67,17 @@ public class MobilePhone {
 
     public boolean updateContact(Contact oldContact, Contact newContact) {
         int pos = findContact(oldContact);
-
         if (pos < 0) {
             System.out.println(oldContact.getName() + " was not found");
             return false;
+        } else if(findContact(newContact.getName()) != -1){
+            System.out.println("Contact with name " + newContact.getName() + " already taken\n"+
+            "Error updating");
+            return false;
         }
+
         myContacts.set(pos, newContact);
-        System.out.println(oldContact.getName() + " was replaced with " + newContact.getPhoneNumber() + " " + newContact.getPhoneNumber());
+        System.out.println(oldContact.getName() + " was replaced with " + newContact.getPhoneNumber());
         return true;
 
 
@@ -97,11 +99,11 @@ public class MobilePhone {
         return null;
     }
 
-    public void printContacts(){
+    public void printContacts() {
         System.out.println("Contacts List");
 
-        for(int i =0; i<myContacts.size(); i++){
-            System.out.println((i+1) + "." + this.myContacts.get(i).getName() + this.myContacts.get(i).getPhoneNumber() );
+        for (int i = 0; i < myContacts.size(); i++) {
+            System.out.println((i + 1) + "." + this.myContacts.get(i).getName() + this.myContacts.get(i).getPhoneNumber());
         }
     }
 
