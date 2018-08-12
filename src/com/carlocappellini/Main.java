@@ -1,13 +1,154 @@
 package com.carlocappellini;
 
 
-public class Main {
+import java.util.Scanner;
 
+public class Main {
+    static Scanner sc = new Scanner(System.in);
+
+    public static MobilePhone mobilePhone =new MobilePhone();
 
     public static void main(String[] args) {
 
 
-        //VIP OBJECT----------------------
+        boolean quit = false;
+        startPhone();
+        printActions();
+        while (!quit) {
+            System.out.println("Enter Action (6 to show available actions)");
+            int action = sc.nextInt();
+            sc.nextLine();
+
+
+            switch (action) {
+                case 0:
+                    System.out.println("Quiting....");
+                    quit = true;
+                    break;
+                case 1:
+                    mobilePhone.printContacts();
+                    break;
+                case 2:
+                    addContact();
+                    break;
+                case 3:
+                    updateContact();
+                    break;
+                case 4:
+                    removeContact();
+                    break;
+                case 5:
+                    queryContact();
+                    break;
+                case 6:
+                    printActions();
+                    break;
+                default:
+                    System.out.println("Invalid Choice");
+
+
+            }
+        }
+
+    }
+
+    private static void addContact() {
+
+        System.out.println("Enter new contact name");
+        String name = sc.nextLine();
+        System.out.println("Enter Phone Number");
+        String phoneNumber = sc.nextLine();
+        Contact newContact = Contact.createContact(name, phoneNumber);
+        if (mobilePhone.addNewContact(newContact)) {
+            System.out.println("New Contact added: " + name + " , " + phoneNumber);
+        } else {
+            System.out.println("Cannot add, " + name + " already on file");
+        }
+    }
+
+    private static void updateContact() {
+        System.out.println("Enter existing contact name to update");
+        String name = sc.nextLine();
+        Contact existingContact = mobilePhone.queryContact(name);
+
+        if (existingContact == null) {
+            System.out.println("Contact not found");
+            return;
+        } else {
+            System.out.println("Enter new Contact name ");
+            String newName = sc.nextLine();
+            System.out.println("Enter new Phone number ");
+            String newPhoneNumber = sc.nextLine();
+
+            Contact newContact = new Contact(newName, newPhoneNumber);
+           if (mobilePhone.updateContact(existingContact, newContact)) {
+               System.out.println("Successfully updated");
+           } else {
+
+               System.out.println("Error updating contact");
+
+           }
+        }
+    }
+
+
+    public  static void queryContact(){
+        System.out.println("Search a Contact");
+        String contact = sc.nextLine();
+        Contact searchedContact = mobilePhone.queryContact(contact);
+
+        if (searchedContact == null){
+            System.out.println("Contact not found");
+
+        } else{
+            System.out.println("found " + searchedContact.getName()+ " " + searchedContact.getPhoneNumber());
+
+        }
+
+
+
+
+    }
+
+
+    public static  void removeContact(){
+        System.out.println("Enter Contact to remove");
+        String name = sc.nextLine();
+     Contact contact = mobilePhone.queryContact(name);
+             if(contact != null){
+                if (mobilePhone.removeContact(contact)){
+                    System.out.println("Successfully Deleted");
+                };
+             }
+             else {
+                 System.out.println("Cannot find that contact");
+             }
+
+
+    }
+
+
+    private static void startPhone() {
+        System.out.println("Starting Phone......");
+    }
+
+    private static void printActions() {
+        System.out.println("\nAvailable actions:\n");
+
+        System.out.println(
+                "0 - To shutdown\n" +
+                        "1 - Print list of contacts\n" +
+                        "2 - Add new contact\n" +
+                        "3 - Update existing contact\n" +
+                        "4 - Remove contact\n" +
+                        "5 - Search contact\n" +
+                        "6 - To print list if available actions");
+        System.out.println("Choose you action:");
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    //VIP OBJECT----------------------
 
 //        VipCustomer vp = new VipCustomer();
 //
@@ -29,7 +170,7 @@ public class Main {
 //
 //        /////////////////////////////////////////////
 
-        // CAR OBJECT----------------------
+    // CAR OBJECT----------------------
 
 //        Car Lamborghini = new Car();
 //        System.out.println("Model " + Lamborghini.getModel());
@@ -37,13 +178,13 @@ public class Main {
 //        System.out.println("Model " + Lamborghini.getModel());
 
 
-        ///////////////////////////////////////////////
+    ///////////////////////////////////////////////
 
 
-        //Java automatically creates constructor, when we type new, this calls the constructor, calls a special method that creates the class, its purpose is to physically create the object from the class
+    //Java automatically creates constructor, when we type new, this calls the constructor, calls a special method that creates the class, its purpose is to physically create the object from the class
 
 
-        //BANK ACCOUNT OBJECT----------------------
+    //BANK ACCOUNT OBJECT----------------------
 
 //        BankAccount checking = new BankAccount();//1234, 30.0, "carlo", "test@tgest.com", "323223");
 
@@ -57,7 +198,7 @@ public class Main {
 //
 
 
-        // the values have been automatically updated in hte constructor
+    // the values have been automatically updated in hte constructor
 
 //
 //        System.out.println(checking.getAccountNumber());
@@ -169,26 +310,27 @@ public class Main {
 //printer.printPaper(20);
 
 
-        Hamburger hamburger = new Hamburger("bun", "horse", 5.50);
-
-        hamburger.burgerTotal();
-        HealthyBurger healthyBurger = new HealthyBurger("turtle", 3.58);
-
-        healthyBurger.addHealthyItem1("frijoles", 3.5);
-        healthyBurger.addHealthyItem2("frijoles", 3.5);
-
-        healthyBurger.healthyBurgerTotal();
-
-        System.out.println(healthyBurger.getName());
-DeluxeBurger deluxeBurger = new DeluxeBurger("white","donkey",5.75);
-
-
-deluxeBurger.total();
-
-    }
+//        Hamburger hamburger = new Hamburger("bun", "horse", 5.50);
+//
+//        hamburger.burgerTotal();
+//        HealthyBurger healthyBurger = new HealthyBurger("turtle", 3.58);
+//
+//        healthyBurger.addHealthyItem1("frijoles", 3.5);
+//        healthyBurger.addHealthyItem2("frijoles", 3.5);
+//
+//        healthyBurger.healthyBurgerTotal();
+//
+//        System.out.println(healthyBurger.getName());
+//DeluxeBurger deluxeBurger = new DeluxeBurger("white","donkey",5.75);
+//
+//
+//deluxeBurger.total();
 
 
 }
+
+
+
 
 
 
