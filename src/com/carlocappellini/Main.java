@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     static Scanner sc = new Scanner(System.in);
 
-    public static MobilePhone mobilePhone;
+    public static MobilePhone mobilePhone =new MobilePhone();
 
     public static void main(String[] args) {
 
@@ -89,6 +89,25 @@ public class Main {
 
            }
         }
+    }
+
+
+    public  static void queryContact(){
+        System.out.println("Search a Contact");
+        String contact = sc.nextLine();
+        Contact searchedContact = mobilePhone.queryContact(contact);
+
+        if (searchedContact == null){
+            System.out.println("Contact not found");
+
+        } else{
+            System.out.println("found " + searchedContact.getName() + searchedContact.getPhoneNumber());
+
+        }
+
+
+
+
     }
 
 

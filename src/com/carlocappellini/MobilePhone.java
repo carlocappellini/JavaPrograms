@@ -12,8 +12,7 @@ public class MobilePhone {
     }
 
 
-    public MobilePhone(String myNumber) {
-        this.myNumber = myNumber;
+    public MobilePhone() {
         this.myContacts = new ArrayList<Contact>();
     }
 
