@@ -21,17 +21,20 @@ public class Main {
         bank.addCustomer("Sydney", "Percy", 6.3);
         bank.addCustomer("Sydney", "Bob", 40.4);
 
-bank.addCustomerTransaction("Texas", "Jessica", 44.2);
+        bank.addCustomerTransaction("Texas", "Jessica", 44.2);
 
         bank.addCustomerTransaction("Texas", "Carlo", 2.3);
 
         bank.addCustomerTransaction("Sydney", "Percy", 9.2);
 
 
+        bank.listCustomers("Texas", true);
 
+        bank.addBranch("melbourne");
 
-        bank.listCustomers("Texas",true);
-
+        if (!bank.addCustomer("melbourne", "Brian", 5.4)) {
+            System.out.println("ERROR melbourne brian does not exist");
+        }
     }
 }
 ///// MOBILE PHONE CONTACT PROGRAM
