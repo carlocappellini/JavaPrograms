@@ -35,6 +35,10 @@ public class Main {
         if (!bank.addCustomer("melbourne", "Brian", 5.4)) {
             System.out.println("ERROR melbourne brian does not exist");
         }
+        if (!bank.addBranch("Texas")){
+            System.out.println("Texas is on file");
+        }
+
     }
 }
 ///// MOBILE PHONE CONTACT PROGRAM
