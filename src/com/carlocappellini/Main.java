@@ -9,38 +9,38 @@ public class Main {
     public static MobilePhone mobilePhone = new MobilePhone();
 
     public static void main(String[] args) {
-        Bank bank = new Bank("SSFCU");
-
-
-        bank.addBranch("Texas");
-
-        bank.addCustomer("Texas", "Carlo", 10.0);
-        bank.addCustomer("Texas", "Jessica", 18.89);
-        bank.addCustomer("Texas", "Percy", 56.92);
-        bank.addBranch("Sydney");
-        bank.addCustomer("Sydney", "Percy", 6.3);
-        bank.addCustomer("Sydney", "Bob", 40.4);
-
-        bank.addCustomerTransaction("Texas", "Jessica", 44.2);
-
-        bank.addCustomerTransaction("Texas", "Carlo", 2.3);
-
-        bank.addCustomerTransaction("Sydney", "Percy", 9.2);
-
-
-        bank.listCustomers("Texas", true);
-
-        bank.addBranch("melbourne");
-
-        if (!bank.addCustomer("melbourne", "Brian", 5.4)) {
-            System.out.println("ERROR melbourne brian does not exist");
-        }
-        if (!bank.addBranch("Texas")){
-            System.out.println("Texas is on file");
-        }
-
-    }
-}
+//        Bank bank = new Bank("SSFCU");
+//
+//
+//        bank.addBranch("Texas");
+//
+//        bank.addCustomer("Texas", "Carlo", 10.0);
+//        bank.addCustomer("Texas", "Jessica", 18.89);
+//        bank.addCustomer("Texas", "Percy", 56.92);
+//        bank.addBranch("Sydney");
+//        bank.addCustomer("Sydney", "Percy", 6.3);
+//        bank.addCustomer("Sydney", "Bob", 40.4);
+//
+//        bank.addCustomerTransaction("Texas", "Jessica", 44.2);
+//
+//        bank.addCustomerTransaction("Texas", "Carlo", 2.3);
+//
+//        bank.addCustomerTransaction("Sydney", "Percy", 9.2);
+//
+//
+//        bank.listCustomers("Texas", true);
+//
+//        bank.addBranch("melbourne");
+//
+//        if (!bank.addCustomer("melbourne", "Brian", 5.4)) {
+//            System.out.println("ERROR melbourne brian does not exist");
+//        }
+//        if (!bank.addBranch("Texas")){
+//            System.out.println("Texas is on file");
+//        }
+//
+//    }
+//}
 ///// MOBILE PHONE CONTACT PROGRAM
 
 //        boolean quit = false;
@@ -362,10 +362,9 @@ public class Main {
 
 
 
-
-
-
-
-
-
+        Album album = new Album("ramones","ramon");
+        album.addSong("carlo",4.4);
+        album.findSong("calo");
+    }
+}
 
