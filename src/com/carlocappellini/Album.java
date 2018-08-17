@@ -94,7 +94,6 @@ public boolean addToPlayList(String title, LinkedList<Song> playlist){
 Song checkedSong = findSong(title);
 
 if (checkedSong != null){
-
     playlist.add(checkedSong);
 return true;
 
