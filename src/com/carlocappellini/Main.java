@@ -7,11 +7,10 @@ import java.util.ListIterator;
 import java.util.Scanner;
 
 public class Main {
-    private static ArrayList<Album> albums = new ArrayList<Album>();
+//    private static ArrayList<Album> albums = new ArrayList<Album>();
 
 //    public static MobilePhone mobilePhone = new MobilePhone();
 
-    public static void main(String[] args) {
 
 //        Bank bank = new Bank("SSFCU");
 //
@@ -527,9 +526,12 @@ public class Main {
 //        } else {
 //            System.out.println("playlist completed");
 //        }
+public static void main(String[] args) {
 
 
 Player carlo = new Player("Carlo",15);
+
+    ISaveable werewolf = new Monster("Werewolf",20,10);
 
         System.out.println(carlo.toString());
         saveObject(carlo);
@@ -539,9 +541,15 @@ Player carlo = new Player("Carlo",15);
         carlo.setWeapon("Mace");
         saveObject(carlo);
         System.out.println(carlo.toString());
-        loadObject(carlo);
+//        loadObject(carlo);
         System.out.println(carlo);
-    }
+
+        System.out.println(werewolf);
+        saveObject(werewolf);
+        //object casting
+    System.out.println(((Monster)werewolf).getStrength());
+
+}
     public static ArrayList<String> readValues(){
         ArrayList<String> values = new ArrayList<String>();
 
