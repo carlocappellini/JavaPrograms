@@ -541,7 +541,7 @@ Player carlo = new Player("Carlo",15);
         carlo.setWeapon("Mace");
         saveObject(carlo);
         System.out.println(carlo.toString());
-//        loadObject(carlo);
+        loadObject(carlo);
         System.out.println(carlo);
 
         System.out.println(werewolf);
@@ -560,6 +560,7 @@ Player carlo = new Player("Carlo",15);
         System.out.println("Choose\n " +
         "1 to enter a string\n"+
         "0 to quit");
+
         while (!quit){
             System.out.println("Choose An Option");
             int choice = scanner.nextInt();
@@ -580,8 +581,6 @@ Player carlo = new Player("Carlo",15);
         }
         return values;
     }
-
-
     public static void saveObject(ISaveable objectToSave){
         for (int i =0; i<objectToSave.write().size(); i++ ){
             System.out.println("Saving " + objectToSave.write().get(i) + " to storage device");
