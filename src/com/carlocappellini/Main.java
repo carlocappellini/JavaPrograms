@@ -528,7 +528,7 @@ public class Main {
 //        }
 
 
-//////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////
 //
 //Player carlo = new Player("Carlo",15);
 //
@@ -593,14 +593,70 @@ public class Main {
 //    public static void loadObject(ISaveable objectToLoad){
 //        ArrayList<String> values = readValues();
 //        objectToLoad.read(values);
-
+    private static Button button = new Button("print");
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        GearBox toyota = new GearBox(8);
-        toyota.clutchIn(true);
-        toyota.changeGear(1);
-        System.out.println( toyota.wheelSpeed(1000));
+
+//        class ClickListener implements Button.OnclickListener {
+//
+//
+//            @Override
+//            public void onClick(String title) {
+//                System.out.println(button.getTitle() + " was pressed");
+//            }
+//
+//            public ClickListener() {
+//                System.out.println("button created");
+//            }
+//
+//
+//
+//        }
+        button.setOnClickListener(new Button.OnclickListener() {
+            @Override
+            public void onClick(String title) {
+                System.out.println(title + " was clicked");
+            }
+        });
+
+        listen();
+
+//        GearBox toyota = new GearBox(8);
+//        toyota.clutchIn(true);
+//        toyota.changeGear(1);
+//        System.out.println( toyota.wheelSpeed(1000));
+
+
+        //////////////
+
+
+    }
+    private static void listen() {
+
+        System.out.println("Choose\n" +
+                "0 - to quit\n" +
+                "1 - to click");
+
+        boolean quit = false;
+
+        while (!quit) {
+
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 0:
+                    System.out.println("Quitting");
+                    quit = true;
+                    break;
+                case 1:
+                    button.onClick();
+
+            }
+        }
+
 
     }
 }

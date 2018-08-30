@@ -49,7 +49,6 @@ public class GearBox {
     }
 
 
-
     public class Gear {
         private int gearNumber = 0;
         private double ratio;
@@ -62,7 +61,6 @@ public class GearBox {
             this.gearNumber = currentGear;
             this.ratio = ratio;
         }
-
 
 
     }
