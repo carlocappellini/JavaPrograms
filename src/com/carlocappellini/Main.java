@@ -526,72 +526,138 @@ public class Main {
 //        } else {
 //            System.out.println("playlist completed");
 //        }
-public static void main(String[] args) {
 
 
-Player carlo = new Player("Carlo",15);
+    //////////////////////////////////////////////////////////////
+//
+//Player carlo = new Player("Carlo",15);
+//
+//    ISaveable werewolf = new Monster("Werewolf",20,10);
+//
+//        System.out.println(carlo.toString());
+//        saveObject(carlo);
+//
+//        carlo.setStrength(20);
+//        System.out.println(carlo);
+//        carlo.setWeapon("Mace");
+//        saveObject(carlo);
+//        System.out.println(carlo.toString());
+//        loadObject(carlo);
+//        System.out.println(carlo);
+//
+//        System.out.println(werewolf);
+//        saveObject(werewolf);
+//        //object casting
+//    System.out.println(((Monster)werewolf).getStrength());
+//
+//}
+//    public static ArrayList<String> readValues(){
+//        ArrayList<String> values = new ArrayList<String>();
+//
+//        Scanner scanner = new Scanner(System.in);
+//        boolean quit = false;
+//
+//        int index = 0 ;
+//        System.out.println("Choose\n " +
+//        "1 to enter a string\n"+
+//        "0 to quit");
+//
+//        while (!quit){
+//            System.out.println("Choose An Option");
+//            int choice = scanner.nextInt();
+//            scanner.nextLine();
+//            switch (choice){
+//
+//                case 0:
+//                    quit =true;
+//                    break;
+//
+//                case 1:
+//                    System.out.println("Enter a string");
+//                    String stringInput = scanner.nextLine();
+//                    values.add(index,stringInput);
+//                    index++;
+//                    break;
+//            }
+//        }
+//        return values;
+//    }
+//    public static void saveObject(ISaveable objectToSave){
+//        for (int i =0; i<objectToSave.write().size(); i++ ){
+//            System.out.println("Saving " + objectToSave.write().get(i) + " to storage device");
+//        }
+//
+//
+//    }
+//
+//    public static void loadObject(ISaveable objectToLoad){
+//        ArrayList<String> values = readValues();
+//        objectToLoad.read(values);
+    private static Button button = new Button("print");
+    private static Scanner scanner = new Scanner(System.in);
 
-    ISaveable werewolf = new Monster("Werewolf",20,10);
+    public static void main(String[] args) {
 
-        System.out.println(carlo.toString());
-        saveObject(carlo);
 
-        carlo.setStrength(20);
-        System.out.println(carlo);
-        carlo.setWeapon("Mace");
-        saveObject(carlo);
-        System.out.println(carlo.toString());
-        loadObject(carlo);
-        System.out.println(carlo);
+//        class ClickListener implements Button.OnclickListener {
+//
+//
+//            @Override
+//            public void onClick(String title) {
+//                System.out.println(button.getTitle() + " was pressed");
+//            }
+//
+//            public ClickListener() {
+//                System.out.println("button created");
+//            }
+//
+//
+//
+//        }
+        button.setOnClickListener(new Button.OnclickListener() {
+            @Override
+            public void onClick(String title) {
+                System.out.println(title + " was clicked");
+            }
+        });
 
-        System.out.println(werewolf);
-        saveObject(werewolf);
-        //object casting
-    System.out.println(((Monster)werewolf).getStrength());
+        listen();
 
-}
-    public static ArrayList<String> readValues(){
-        ArrayList<String> values = new ArrayList<String>();
+//        GearBox toyota = new GearBox(8);
+//        toyota.clutchIn(true);
+//        toyota.changeGear(1);
+//        System.out.println( toyota.wheelSpeed(1000));
 
-        Scanner scanner = new Scanner(System.in);
+
+        //////////////
+
+
+    }
+    private static void listen() {
+
+        System.out.println("Choose\n" +
+                "0 - to quit\n" +
+                "1 - to click");
+
         boolean quit = false;
 
-        int index = 0 ;
-        System.out.println("Choose\n " +
-        "1 to enter a string\n"+
-        "0 to quit");
+        while (!quit) {
 
-        while (!quit){
-            System.out.println("Choose An Option");
             int choice = scanner.nextInt();
             scanner.nextLine();
-            switch (choice){
 
+            switch (choice) {
                 case 0:
-                    quit =true;
+                    System.out.println("Quitting");
+                    quit = true;
                     break;
-
                 case 1:
-                    System.out.println("Enter a string");
-                    String stringInput = scanner.nextLine();
-                    values.add(index,stringInput);
-                    index++;
-                    break;
+                    button.onClick();
+
             }
         }
-        return values;
-    }
-    public static void saveObject(ISaveable objectToSave){
-        for (int i =0; i<objectToSave.write().size(); i++ ){
-            System.out.println("Saving " + objectToSave.write().get(i) + " to storage device");
-        }
 
 
-    }
-
-    public static void loadObject(ISaveable objectToLoad){
-        ArrayList<String> values = readValues();
-        objectToLoad.read(values);
     }
 }
 
