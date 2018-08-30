@@ -32,19 +32,37 @@ public class GearBox {
             System.out.println(newGear);
         } else {
             System.out.println("grind");
+            this.currentGear = 0;
         }
     }
-    public void clutchIn(boolean clutch){
+
+    public void clutchIn(boolean clutch) {
         this.clutch = clutch;
     }
+
+    public double wheelSpeed(int revs) {
+        if (this.clutch) {
+            System.out.println("scream");
+            return 0.0;
+        }
+        return revs * (gears.get(currentGear).getRatio());
+    }
+
+
+
     public class Gear {
         private int gearNumber = 0;
         private double ratio;
+
+        public double getRatio() {
+            return ratio;
+        }
 
         public Gear(int currentGear, double ratio) {
             this.gearNumber = currentGear;
             this.ratio = ratio;
         }
+
 
 
     }

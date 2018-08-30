@@ -600,7 +600,7 @@ public class Main {
         GearBox toyota = new GearBox(8);
         toyota.clutchIn(true);
         toyota.changeGear(1);
-
+        System.out.println( toyota.wheelSpeed(1000));
 
     }
 }
