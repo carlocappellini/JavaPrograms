@@ -6,36 +6,37 @@ public class GearBox {
     private int currentGear = 0;
     private int maxGears;
 
+    private boolean clutch;
+    ArrayList<Gear> gears;
 
-    public ArrayList<Gear> gears;
 
     public GearBox(int maxGears) {
         this.maxGears = maxGears;
         this.gears = new ArrayList<Gear>();
 
-
         for (int i = 0; i <= maxGears; i++) {
-            this.gears.add(new Gear(i, i * 5.3));
+            addGear(i, i * 5.3);
         }
     }
 
-    public boolean addGear(int newGear, double ratio) {
+    public void addGear(int newGear, double ratio) {
         if (newGear > 0 && newGear <= maxGears) {
             this.gears.add(new Gear(newGear, ratio));
-            return true;
         }
-        return false;
     }
-    public void changeGear(int newGear){
-        if (newGear > 0 && newGear <= this.gears.size()) {
+
+    public void changeGear(int newGear) {
+        if (newGear > 0 && newGear <= this.gears.size() && this.clutch) {
             this.currentGear = newGear;
+            clutchIn(false);
             System.out.println(newGear);
-        }else {
+        } else {
             System.out.println("grind");
         }
     }
-
-
+    public void clutchIn(boolean clutch){
+        this.clutch = clutch;
+    }
     public class Gear {
         private int gearNumber = 0;
         private double ratio;
@@ -44,8 +45,6 @@ public class GearBox {
             this.gearNumber = currentGear;
             this.ratio = ratio;
         }
-
-
 
 
     }
