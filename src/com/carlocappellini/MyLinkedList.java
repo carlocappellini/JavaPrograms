@@ -1,5 +1,7 @@
 package com.carlocappellini;
 
+import com.sun.glass.events.mac.NpapiEvent;
+
 public class MyLinkedList implements NodeList {
 
     protected ListItem root = null;
@@ -85,16 +87,32 @@ public class MyLinkedList implements NodeList {
     public static void main(String[] args) {
         MyLinkedList list = new MyLinkedList(null);
 
-        String data = " z x c n b d a g h";
+//        String data = " z x c n b d a g h";
 
 
-        String[] array = data.split(" ");
+//        String[] array = data.split(" ");
 
 
-        for (String s : array) {
-            list.addItem(new Node(s));
-        }
+//        for (String s : array) {
+//            list.addItem(new Node(null));
+//        }
+
+
+        Node node = new Node("3");
+        Node node1 = new Node("4");
+        Node node2 = new Node("5");
+        Node node3 = new Node(6);
+        Node node4 = new Node("hola");
+
+        list.addItem(node);
+        list.addItem(node1);
+
+        list.addItem(node2);
+        list.addItem(node3);
+
+        list.addItem(node4);
         list.traverse(list.getRoot());
+
 
     }
 }
