@@ -9,8 +9,8 @@ public class Team {
     int lost = 0;
     int tied = 0;
 
-
-private ArrayList<Jugador> members = new ArrayList<>();
+    //Jugador is abstract class that other 3 classes extend from
+    private ArrayList<Jugador> members = new ArrayList<>();
 
 
     public Team(String name) {
@@ -20,5 +20,43 @@ private ArrayList<Jugador> members = new ArrayList<>();
 
     public String getName() {
         return name;
+    }
+
+
+    public boolean addPlayer(Jugador jugador) {
+        if (members.contains(jugador)) {
+            System.out.println(jugador.getName() + " is already on this team");
+            return false;
+        } else {
+            members.add(jugador);
+            System.out.println(jugador.getName() + " was picked for team " + this.name);
+            return true;
+        }
+    }
+
+
+    public int numPlayer(Team team) {
+        return this.members.size();
+    }
+
+    public void matchResult(Team opponent, int ourScore, int theirScore ){
+        if (ourScore > theirScore){
+            won++;
+        }
+        else if (ourScore == theirScore){
+            tied++;
+        }else {
+            lost++;
+        }
+
+        played++;
+        if (opponent != null) {
+            opponent.matchResult(null, theirScore, ourScore);
+
+        }
+
+
+
+
     }
 }
