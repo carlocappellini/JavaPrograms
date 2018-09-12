@@ -68,6 +68,20 @@ public class Team<T extends Jugador> {
     }
 
 
+    public int compareTo(Team<T> team){
+        if (this.ranking() > team.ranking()){
+            return -1;
+        }else if (this.ranking()< team.ranking()){
+            return 1;
+
+        }
+        else {
+            return 0;
+        }
+
+
+    }
+
     ///MAIN
 
     public static void main(String[] args) {
@@ -102,6 +116,8 @@ juventus.addPlayer(maradona);
         System.out.println(juventus.ranking());
 
         System.out.println(barcelona.ranking());
+
+        System.out.println(juventus.compareTo(barcelona));
 
 
 
