@@ -72,7 +72,7 @@ public class Team<T extends Jugador> {
         if (this.ranking() > team.ranking()){
             return -1;
         }else if (this.ranking()< team.ranking()){
-            return -1;
+            return 1;
 
         }
         else {
