@@ -82,7 +82,6 @@ public class Team<T extends Jugador> {
         Team<BaseballPlayer> dodgers = new Team<>("Dodgers");
         dodgers.addPlayer(ken);
 
-Team<String>
 
     }
 
