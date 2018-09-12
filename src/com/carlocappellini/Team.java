@@ -25,11 +25,11 @@ public class Team<T extends Jugador> {
 
     public boolean addPlayer(T jugador) {
         if (members.contains(jugador)) {
-            System.out.println(((Jugador) jugador).getName() + " is already on this team");
+            System.out.println(jugador.getName() + " is already on this team");
             return false;
         } else {
             members.add(jugador);
-            System.out.println(((Jugador) jugador).getName() + " was picked for team " + this.name);
+            System.out.println(jugador.getName() + " was picked for team " + this.name);
             return true;
         }
     }
