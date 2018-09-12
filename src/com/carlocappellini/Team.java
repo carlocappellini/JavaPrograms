@@ -2,15 +2,15 @@ package com.carlocappellini;
 
 import java.util.ArrayList;
 
-public class Team {
+public class Team<T extends Jugador> {
     private String name;
-    int played = 0;
-    int won = 0;
-    int lost = 0;
-    int tied = 0;
+    private int played = 0;
+    private int won = 0;
+    private int lost = 0;
+    private int tied = 0;
 
     //Jugador is abstract class that other 3 classes extend from
-    private ArrayList<Jugador> members = new ArrayList<>();
+    private ArrayList<T> members = new ArrayList<>();
 
 
     public Team(String name) {
@@ -23,29 +23,28 @@ public class Team {
     }
 
 
-    public boolean addPlayer(Jugador jugador) {
+    public boolean addPlayer(T jugador) {
         if (members.contains(jugador)) {
-            System.out.println(jugador.getName() + " is already on this team");
+            System.out.println(((Jugador) jugador).getName() + " is already on this team");
             return false;
         } else {
             members.add(jugador);
-            System.out.println(jugador.getName() + " was picked for team " + this.name);
+            System.out.println(((Jugador) jugador).getName() + " was picked for team " + this.name);
             return true;
         }
     }
 
 
-    public int numPlayer(Team team) {
+    public int numPlayer() {
         return this.members.size();
     }
 
-    public void matchResult(Team opponent, int ourScore, int theirScore ){
-        if (ourScore > theirScore){
+    public void matchResult(Team opponent, int ourScore, int theirScore) {
+        if (ourScore > theirScore) {
             won++;
-        }
-        else if (ourScore == theirScore){
+        } else if (ourScore == theirScore) {
             tied++;
-        }else {
+        } else {
             lost++;
         }
 
@@ -56,7 +55,36 @@ public class Team {
         }
 
 
+    }
 
+    public int ranking() {
+        return (won * 2) + tied;
+    }
+
+
+    ///MAIN
+
+    public static void main(String[] args) {
+
+
+        FootballPlayer joe = new FootballPlayer("Joe");
+        BaseballPlayer ken = new BaseballPlayer("Ken");
+        SoccerPlayer messi = new SoccerPlayer("Messi");
+
+        Team<SoccerPlayer> juventus = new Team<>("Juventus");
+
+        juventus.addPlayer(messi);
+
+
+        System.out.println(juventus.numPlayer());
+
+
+        Team<BaseballPlayer> dodgers = new Team<>("Dodgers");
+        dodgers.addPlayer(ken);
+
+Team<String>
 
     }
+
 }
+
