@@ -3,9 +3,6 @@ package com.carlocappellini;
 import java.util.ArrayList;
 
 public class Team<T extends Jugador> implements Comparable<Team<T>> {
-    public Team(String name) {
-        this.name = name;
-    }
 
 
     private String name;
