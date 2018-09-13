@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Team<T extends Jugador> implements Comparable<Team<T>> {
 
 
+
     private String name;
     private int played = 0;
     private int won = 0;
@@ -15,10 +16,10 @@ public class Team<T extends Jugador> implements Comparable<Team<T>> {
     private ArrayList<T> members = new ArrayList<>();
 
 
-//    public Team(String name) {
-//        this.name = name;
-//
-//    }
+    public Team(String name) {
+        this.name = name;
+
+    }
 
     public String getName() {
         return name;
