@@ -2,7 +2,7 @@ package com.carlocappellini;
 
 import java.util.ArrayList;
 
-public class Team<T extends Jugador> {
+public class Team<T extends Jugador> implements Comparable<Team<T>> {
     private String name;
     private int played = 0;
     private int won = 0;
@@ -40,7 +40,7 @@ public class Team<T extends Jugador> {
     }
 
     public void matchResult(Team<T> opponent, int ourScore, int theirScore) {
-       String message;
+        String message;
 
         if (ourScore > theirScore) {
             message = " beat ";
@@ -67,15 +67,14 @@ public class Team<T extends Jugador> {
         return (won * 2) + tied;
     }
 
-
-    public int compareTo(Team<T> team){
-        if (this.ranking() > team.ranking()){
+    @Override
+    public int compareTo(Team<T> team) {
+        if (this.ranking() > team.ranking()) {
             return -1;
-        }else if (this.ranking()< team.ranking()){
+        } else if (this.ranking() < team.ranking()) {
             return 1;
 
-        }
-        else {
+        } else {
             return 0;
         }
 
@@ -106,25 +105,18 @@ public class Team<T extends Jugador> {
         Team<SoccerPlayer> juventus = new Team<>("Juventus");
 
         juventus.addPlayer(messi);
-juventus.addPlayer(maradona);
+        juventus.addPlayer(maradona);
 
         System.out.println(juventus.numPlayer());
         System.out.println(barcelona.numPlayer());
 
 
-        juventus.matchResult(barcelona,10,1);
+        juventus.matchResult(barcelona, 10, 1);
         System.out.println(juventus.ranking());
 
         System.out.println(barcelona.ranking());
 
         System.out.println(juventus.compareTo(barcelona));
-
-
-
-
-
-
-
 
 
     }
