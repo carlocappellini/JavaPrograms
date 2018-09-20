@@ -598,6 +598,18 @@ public class Main {
 
     public static void main(String[] args) {
 
+String output;
+        for (int i = 1; i < 10; i++) {
+            output= " ";
+
+            for (int j = 1; j <= i; j++) {
+                output += i;
+
+            }
+
+            System.out.println(output);
+        }
+
 
 //        class ClickListener implements Button.OnclickListener {
 //
@@ -613,15 +625,15 @@ public class Main {
 //
 //
 //
-//        }
-        button.setOnClickListener(new Button.OnclickListener() {
-            @Override
-            public void onClick(String title) {
-                System.out.println(title + " was clicked");
-            }
-        });
-
-        listen();
+////        }
+//        button.setOnClickListener(new Button.OnclickListener() {
+//            @Override
+//            public void onClick(String title) {
+//                System.out.println(title + " was clicked");
+//            }
+//        });
+//
+//        listen();
 
 //        GearBox toyota = new GearBox(8);
 //        toyota.clutchIn(true);
@@ -633,31 +645,31 @@ public class Main {
 
 
     }
-    private static void listen() {
-
-        System.out.println("Choose\n" +
-                "0 - to quit\n" +
-                "1 - to click");
-
-        boolean quit = false;
-
-        while (!quit) {
-
-            int choice = scanner.nextInt();
-            scanner.nextLine();
-
-            switch (choice) {
-                case 0:
-                    System.out.println("Quitting");
-                    quit = true;
-                    break;
-                case 1:
-                    button.onClick();
-
-            }
-        }
-
-
-    }
+//    private static void listen() {
+//
+//        System.out.println("Choose\n" +
+//                "0 - to quit\n" +
+//                "1 - to click");
+//
+//        boolean quit = false;
+//
+//        while (!quit) {
+//
+//            int choice = scanner.nextInt();
+//            scanner.nextLine();
+//
+//            switch (choice) {
+//                case 0:
+//                    System.out.println("Quitting");
+//                    quit = true;
+//                    break;
+//                case 1:
+//                    button.onClick();
+//
+//            }
+//        }
+//
+//
+//    }
 }
 
