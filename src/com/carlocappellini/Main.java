@@ -1,6 +1,8 @@
 package com.carlocappellini;
 
 
+import com.carlocappellini.mylibrary.Series;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ListIterator;
@@ -598,17 +600,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-String output;
+        String output;
         for (int i = 1; i < 10; i++) {
-            output= " ";
+            output = " ";
 
             for (int j = 1; j <= i; j++) {
-                output += i;
+                output += +i;
 
             }
 
             System.out.println(output);
         }
+
+        System.out.println(Series.nSum(720));
 
 
 //        class ClickListener implements Button.OnclickListener {
@@ -671,5 +675,7 @@ String output;
 //
 //
 //    }
+
+
 }
 
