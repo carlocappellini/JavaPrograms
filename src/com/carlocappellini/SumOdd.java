@@ -26,8 +26,8 @@ public class SumOdd {
         if (start < end && end < start && start < 1 && end < 1) {
             return -1;
         }
-        for(int i = start; i <= end; i++){
-            if(isOdd(i)) {
+        for (int i = start; i <= end; i++) {
+            if (isOdd(i)) {
                 sum += i;
             }
 

@@ -70,9 +70,9 @@ public class MobilePhone {
         if (pos < 0) {
             System.out.println(oldContact.getName() + " was not found");
             return false;
-        } else if(findContact(newContact.getName()) != -1){
-            System.out.println("Contact with name " + newContact.getName() + " already taken\n"+
-            "Error updating");
+        } else if (findContact(newContact.getName()) != -1) {
+            System.out.println("Contact with name " + newContact.getName() + " already taken\n" +
+                    "Error updating");
             return false;
         }
 

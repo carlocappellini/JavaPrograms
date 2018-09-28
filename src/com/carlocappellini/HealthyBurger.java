@@ -28,18 +28,14 @@ public class HealthyBurger extends Hamburger {
     }
 
 
-
     public double getHealthyOption2Price() {
         return healthyOption2Price;
     }
 
 
-
     public String getHealthyOption1() {
         return healthyOption1;
     }
-
-
 
 
     public String getHealthyOption2() {

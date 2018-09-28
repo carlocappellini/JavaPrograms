@@ -70,7 +70,7 @@ public class Operators {
         isCAr = true;
         boolean wasCAr = isCAr ? true : false;
 
-        if(wasCAr)
+        if (wasCAr)
             System.out.println("wasCar is true " + wasCAr);
 
         double dbleVal = 20;
@@ -84,11 +84,10 @@ public class Operators {
         double theRemainder = totalResult % 40;
         System.out.println("reminder is " + theRemainder);
 
-        if(theRemainder <= 20){
+        if (theRemainder <= 20) {
             System.out.println("total was over the limit");
 
         }
-
 
 
     }

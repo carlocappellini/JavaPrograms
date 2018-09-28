@@ -15,9 +15,9 @@ public class MinAndMaxChallenge {
 //        int min = 2147483648;
 //        int max = -2147483648;
 
-       // OR
+        // OR
 
-       // int min = Integer.MAX_VALUE;
+        // int min = Integer.MAX_VALUE;
 //        int max = Integer.MIN_VALUE;
 
 //
@@ -28,31 +28,23 @@ public class MinAndMaxChallenge {
 //            if (sc.hasNextInt()) {
 //                    int number = sc.nextInt();
 //
-            //        if (number > max) {
-            //            max = number;
-            //        }
-            //        if (number < min) {
-            //            min = number;
-            //        }
-            //
-            //    } else {
-            //        System.out.println("not a number");
-            //        break;
-            //    }
-            //
+        //        if (number > max) {
+        //            max = number;
+        //        }
+        //        if (number < min) {
+        //            min = number;
+        //        }
+        //
+        //    } else {
+        //        System.out.println("not a number");
+        //        break;
+        //    }
+        //
 //            } else {
 //                System.out.println("not a number");
 //                break;
 //            }
 //        }
-
-
-
-
-
-
-
-
 
 
         //another solution
@@ -72,8 +64,6 @@ public class MinAndMaxChallenge {
             if (isAnInt) {
                 int number = sc.nextInt();
                 System.out.println("number entered " + number);
-
-
 
 
 // first we check if first number flag is set to true, which it is

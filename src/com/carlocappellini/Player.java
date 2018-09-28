@@ -42,7 +42,6 @@ public class Player implements ISaveable {
     }
 
 
-
     @Override
     public String toString() {
         return "Player{" +
@@ -54,21 +53,23 @@ public class Player implements ISaveable {
 
     @Override
     public List<String> write() {
-List<String> values = new ArrayList<String>();
-values.add(0,this.name);
-values.add(1,"" + this.strength);
+        List<String> values = new ArrayList<String>();
+        values.add(0, this.name);
+        values.add(1, "" + this.strength);
         values.add(2, this.weapon);
 
 
-return values;
+        return values;
 
     }
+
     @Override
     public void read(List<String> savedValues) {
-if (savedValues!= null && savedValues.size() > 0){
-this.name = savedValues.get(0);
-this.strength = Integer.parseInt(savedValues.get(1));
-}this.weapon = savedValues.get(2);
+        if (savedValues != null && savedValues.size() > 0) {
+            this.name = savedValues.get(0);
+            this.strength = Integer.parseInt(savedValues.get(1));
+        }
+        this.weapon = savedValues.get(2);
     }
 
 

@@ -34,8 +34,7 @@ public class Case {
     }
 
 
-
-    public void pressPowerButton(){
+    public void pressPowerButton() {
         System.out.println("Power button pressed");
     }
 

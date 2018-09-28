@@ -9,8 +9,7 @@ public class CharAndBoolean {
         char aries = '\u2648';
 
 
-
-        System.out.println(myChar + " & " + aries );
+        System.out.println(myChar + " & " + aries);
 
         String myString = "this is a String ";
         System.out.println(myString);

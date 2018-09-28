@@ -18,11 +18,12 @@ public class League<T extends Team> {
     public League(String leagueName) {
         this.leagueName = leagueName;
     }
+
     public void viewLeagueTable() {
         Collections.sort(leagueTeams);
 
 
-        for (T i: leagueTeams){
+        for (T i : leagueTeams) {
 
             System.out.println(i.getName());
         }
@@ -45,8 +46,6 @@ public class League<T extends Team> {
 
 
     }
-
-
 
 
     public static void main(String[] args) {

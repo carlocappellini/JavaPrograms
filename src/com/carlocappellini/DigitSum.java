@@ -3,7 +3,7 @@ package com.carlocappellini;
 public class DigitSum {
 
     public static void main(String[] args) {
-        System.out.println("The sum of the digits = " +  sumDigit(15));
+        System.out.println("The sum of the digits = " + sumDigit(15));
     }
 
     public static int sumDigit(int number) {

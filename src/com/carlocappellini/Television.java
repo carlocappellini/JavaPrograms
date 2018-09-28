@@ -13,10 +13,9 @@ public class Television {
         this.enhancement = enhancement;
     }
 
-    public void turnOnTV(){
+    public void turnOnTV() {
         System.out.println("TV is On");
     }
-
 
 
 }

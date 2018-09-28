@@ -19,7 +19,7 @@ public class Animal {
 
     //create Animal constructor
 
-    public Animal(String name, int brain, int body, int size, int weight){
+    public Animal(String name, int brain, int body, int size, int weight) {
 
         this.name = name;
         this.brain = brain;
@@ -41,7 +41,7 @@ public class Animal {
 
     // because we defined this methods as public, we've said these methods are publicly accessible, the Dog class can reflect that and it's extending animal
     // in other words inheriting from the Animal class and as a result we are able to the eat and move method even if they are not part of the Dog class
-    public void eat(){
+    public void eat() {
         System.out.println("Animal.eat() called");
 
     }
@@ -53,9 +53,7 @@ public class Animal {
     }
 
 
-
-
-    public String getName(){
+    public String getName() {
         return name;
     }
 

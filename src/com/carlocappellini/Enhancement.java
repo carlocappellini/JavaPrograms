@@ -27,26 +27,23 @@ public class Enhancement {
     }
 
 
-    public Enhancement( boolean isEnhancedResolution, int minHDResolution) {
+    public Enhancement(boolean isEnhancedResolution, int minHDResolution) {
         this.isEnhancedResolution = isEnhancedResolution;
         this.minHDResolution = minHDResolution;
     }
 
 
-
-
-public void resolution4K(){
+    public void resolution4K() {
         isEnhancedResolution = true;
-    System.out.println("4k Resolution is now at " + maxHDResolution);
+        System.out.println("4k Resolution is now at " + maxHDResolution);
 
-}
+    }
 
-public void standarResolution(){
+    public void standarResolution() {
         isEnhancedResolution = false;
-    System.out.println("Resolution is " + minHDResolution);
+        System.out.println("Resolution is " + minHDResolution);
 
-}
-
+    }
 
 
 }

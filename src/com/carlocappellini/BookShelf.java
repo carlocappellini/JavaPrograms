@@ -5,8 +5,7 @@ import java.util.List;
 
 public class BookShelf {
     private int books;
-    private  Dimensions dimensions;
-
+    private Dimensions dimensions;
 
 
     public int getBooks() {
@@ -18,20 +17,19 @@ public class BookShelf {
     }
 
 
-
     public BookShelf(int books, Dimensions dimensions) {
 
     }
 
-    public void grabABook(){
+    public void grabABook() {
         System.out.println("Grabbing a Book");
     }
 
-    public void readingBook(){
+    public void readingBook() {
         System.out.println("Reading Book");
     }
 
-    }
+}
 
 
 

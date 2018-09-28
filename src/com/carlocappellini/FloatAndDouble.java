@@ -11,13 +11,13 @@ public class FloatAndDouble {
         float myFloatValue = 5f / 3f;
 
         //width of float is 64 (8bytes)
-        double myDoubleValue  = 5d / 3d;
+        double myDoubleValue = 5d / 3d;
 
 
         // double precision is faster, java is more popular, precise etc(recommended)
 
 
-        System.out.println("my int value = "  + myValue);
+        System.out.println("my int value = " + myValue);
         System.out.println("my float value = " + myFloatValue);
         System.out.println("my double value = " + myDoubleValue);
 

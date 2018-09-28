@@ -17,6 +17,7 @@ public class Room {
     public String getName() {
         return name;
     }
+
     public Television getTelevision() {
         return television;
     }
@@ -52,7 +53,7 @@ public class Room {
 
     }
 
-    public void imHere(){
+    public void imHere() {
         wallFrame.observingFrame();
         bookShelf.grabABook();
         couch.layInCouch();

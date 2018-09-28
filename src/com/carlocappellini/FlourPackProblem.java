@@ -59,8 +59,6 @@ public class FlourPackProblem {
 //    }
 
 
-
-
         if (bigCount >= 0 || smallCount >= 0) {
             int check;
             int bigBagResult;
@@ -70,7 +68,7 @@ public class FlourPackProblem {
             check = goal % 5;
 
             if (check <= smallCount || sum >= goal) {
-                System.out.println(bigCount + " " + smallCount + " " + goal );
+                System.out.println(bigCount + " " + smallCount + " " + goal);
                 return true;
 
             } else {

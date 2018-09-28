@@ -33,6 +33,7 @@ public class VipCustomer {
     public double getCreditLimit() {
         return creditLimit;
     }
+
     public String getEmail() {
         return email;
     }

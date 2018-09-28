@@ -33,37 +33,35 @@ public class ReadingUserInputChallenge {
 //        }
 
 
-
-
         //different method
 
 
-        int counter =0;
-        int sum =0;
+        int counter = 0;
+        int sum = 0;
 
-        while (true){
+        while (true) {
             int order = counter + 1;
-            System.out.println("Enter number # " + order );
+            System.out.println("Enter number # " + order);
 
 
             boolean isAnInt = scanner.hasNextInt();
 
-            if (isAnInt){
+            if (isAnInt) {
                 int number = scanner.nextInt();
                 counter++;
-                sum +=number;
-                if(counter ==10){
+                sum += number;
+                if (counter == 10) {
 
                     break;
                 }
 
-            }else {
+            } else {
                 System.out.println("Invalid number");
             }
 
             scanner.nextLine(); // handle end of line
         }
-        System.out.println("sum " + sum) ;
+        System.out.println("sum " + sum);
         scanner.close();
 
     }

@@ -50,13 +50,13 @@ public class Arrays {
             flag = false;
 
 
-            for (int i=0; i<sortedArray.length-1; i++) {
-                if (sortedArray[i]<sortedArray[i+1]) {
+            for (int i = 0; i < sortedArray.length - 1; i++) {
+                if (sortedArray[i] < sortedArray[i + 1]) {
                     temp = sortedArray[i];
-                    System.out.println("temp " +temp);
-                    sortedArray[i] = sortedArray[i+1];
+                    System.out.println("temp " + temp);
+                    sortedArray[i] = sortedArray[i + 1];
                     sortedArray[i + 1] = temp;
-                    System.out.println("temp 2 " +temp);
+                    System.out.println("temp 2 " + temp);
 
                     System.out.println("sort " + sortedArray[i]);
                     flag = true;
@@ -77,10 +77,9 @@ public class Arrays {
         int[] ints = {8, 67, 1, 5, 2};
 
 
+        int[] q = getIntegers(5);
 
-    int [] q = getIntegers(5);
-
-int [] sorted = sortArray(q);
+        int[] sorted = sortArray(q);
 
         printArray(sorted);
     }
