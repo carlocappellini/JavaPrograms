@@ -19,9 +19,9 @@ public class DeluxeBurger extends Hamburger {
     private String chips;
     private String drink;
 
-    public DeluxeBurger(String breadRollType,String meat, double price
-    ){
-        super(breadRollType,meat,price);
+    public DeluxeBurger(String breadRollType, String meat, double price
+    ) {
+        super(breadRollType, meat, price);
         this.name = "Deluxe Burger";
 
         super.addOneItem("chips", 1);
@@ -29,15 +29,11 @@ public class DeluxeBurger extends Hamburger {
     }
 
 
+    public double total() {
 
-
-    public   double total (){
-
-        System.out.println(this.getName() +" is " + this.getPrice()) ;
+        System.out.println(this.getName() + " is " + this.getPrice());
         return this.getPrice();
     }
-
-
 
 
 }

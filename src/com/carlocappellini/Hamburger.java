@@ -82,7 +82,8 @@ public class Hamburger {
         this.breadRollType = breadRollType;
         this.meat = meat;
         this.price = price;
-setMaxToppings(4);    }
+        setMaxToppings(4);
+    }
 
     public void addOneItem(String name, double price) {
 
@@ -114,7 +115,7 @@ setMaxToppings(4);    }
         if (this.oneItem != null && count <= this.maxToppings) {
             count++;
             price += this.oneItemPrice;
-            System.out.println("option "+ count + this.oneItem + " for " + this.oneItemPrice);
+            System.out.println("option " + count + this.oneItem + " for " + this.oneItemPrice);
         }
         if (this.twoItem != null && count <= this.maxToppings) {
             count++;
@@ -127,12 +128,12 @@ setMaxToppings(4);    }
             count++;
             price += this.threeItemPrice;
 
-            System.out.println("option  " + count+ this.threeItem + " for " + this.threeItemPrice);
+            System.out.println("option  " + count + this.threeItem + " for " + this.threeItemPrice);
         }
         if (this.fourItem != null && count <= this.maxToppings) {
             count++;
             price += this.fourItemPrice;
-            System.out.println("option "+ count + this.fourItem + " for " + this.fourItemPrice);
+            System.out.println("option " + count + this.fourItem + " for " + this.fourItemPrice);
         }
         if (count > this.maxToppings) {
             System.out.println("cannot add anymore Toppings");

@@ -21,7 +21,7 @@ public class FirstAndLastDigitSum {
 
             firstDigit /= 10;
         }
-            lastDigit = number % 10;
+        lastDigit = number % 10;
 
         System.out.println(number + " = " + firstDigit + " + " + lastDigit + " = " + (firstDigit + lastDigit));
 

@@ -30,60 +30,58 @@ public class FastCar extends Car2 {
     }
 
 
-
-
-    public FastCar(int wheels, int doors, String color, int speed, boolean turbo, String model){
-         super(wheels, doors, color);
-         this.speed = speed;
-         this.turbo = turbo;
-         this.model = model;
+    public FastCar(int wheels, int doors, String color, int speed, boolean turbo, String model) {
+        super(wheels, doors, color);
+        this.speed = speed;
+        this.turbo = turbo;
+        this.model = model;
         System.out.println("FastCar created");
 
     }
 
-    private void goesTurbo(int speed){
+    private void goesTurbo(int speed) {
         this.speed = speed;
-        System.out.println("FastCar is Going turbo at" +  this.speed +" mph");
+        System.out.println("FastCar is Going turbo at" + this.speed + " mph");
 
     }
 
 
     public void velocity(int gear) {
-        switch (gear){
+        switch (gear) {
 
             case 1:
                 this.speed = 30;
-                System.out.println("at gear " + gear +" speed is at " + this.speed);
+                System.out.println("at gear " + gear + " speed is at " + this.speed);
                 break;
             case 2:
-                this.speed =50;
-                System.out.println("at gear " + gear +" speed is at " + this.speed);
+                this.speed = 50;
+                System.out.println("at gear " + gear + " speed is at " + this.speed);
                 break;
 
             case 3:
                 this.speed = 70;
-                System.out.println("at gear " + gear +" speed is at " + this.speed);
+                System.out.println("at gear " + gear + " speed is at " + this.speed);
                 break;
 
             case 4:
                 this.speed = 95;
-                System.out.println("at gear " + gear +" speed is at " + this.speed);break;
+                System.out.println("at gear " + gear + " speed is at " + this.speed);
+                break;
 
             case 5:
                 this.speed = 120;
-                System.out.println("at gear " + gear +" speed is at " + this.speed);
+                System.out.println("at gear " + gear + " speed is at " + this.speed);
                 break;
 
             case 6:
-               this.speed = 160;
-               goesTurbo(this.speed+=50);
-                System.out.println("at gear " + gear +" speed is at " + this.speed);
+                this.speed = 160;
+                goesTurbo(this.speed += 50);
+                System.out.println("at gear " + gear + " speed is at " + this.speed);
                 break;
 
         }
 
     }
-
 
 
 }

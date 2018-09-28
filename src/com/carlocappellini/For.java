@@ -61,7 +61,7 @@ public class For {
         //   for (int i = 2; i <= n / 2; i++) {
 
 
-        for (int i = 2; i <=(long) Math.sqrt(n); i++) {
+        for (int i = 2; i <= (long) Math.sqrt(n); i++) {
 
 
             // if no remainder ,cant be prime number

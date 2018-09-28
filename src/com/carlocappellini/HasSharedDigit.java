@@ -11,8 +11,7 @@ public class HasSharedDigit {
 
         if (number < 99 || number > 10 && shared < 99 || shared > 10) {
 
-            while ((number % 10 == shared % 10) || (number / 10 == shared % 10) || (number % 10 == shared / 10) || number/10 == shared/10) {
-
+            while ((number % 10 == shared % 10) || (number / 10 == shared % 10) || (number % 10 == shared / 10) || number / 10 == shared / 10) {
 
 
                 System.out.println("true");

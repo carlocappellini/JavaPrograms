@@ -69,7 +69,7 @@ public class SuperHeroPlayer {
             System.out.println(i);
         }
         System.out.println("Rage time reached");
-        this.health = 20 ;
+        this.health = 20;
         this.rageMeter = 0;
         System.out.println("back to normal health = " + this.health + " Rage = " + this.rageMeter);
 
@@ -142,7 +142,7 @@ public class SuperHeroPlayer {
     public void shootFire(int fire) {
 
         int count = 0;
-        while (true ) {
+        while (true) {
             if (fire <= 5) {
                 for (int i = 1; i <= fire; i++) {
                     count++;
@@ -150,7 +150,7 @@ public class SuperHeroPlayer {
                 }
                 System.out.println("explosion......");
 
-            }else {
+            } else {
                 System.out.println("can only throw between 1 and 5 fireballs");
             }
 

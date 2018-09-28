@@ -18,8 +18,6 @@ public class NumberPalindrome {
             number = number / 10;
 
 
-
-
             if (number == reverse || reverse == number) {
                 System.out.println("palindrome");
                 System.out.println(reverse);

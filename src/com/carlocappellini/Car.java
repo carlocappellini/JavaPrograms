@@ -150,9 +150,9 @@ public class Car {
 
     public void setModel(String model) {
         String validmodel = model.toLowerCase();
-        if (validmodel.equals("Lamborghini") || validmodel.equals("Ferrari")){
+        if (validmodel.equals("Lamborghini") || validmodel.equals("Ferrari")) {
             this.model = model;
-        } else{
+        } else {
             System.out.println("Unknown");
         }
 
@@ -233,10 +233,6 @@ public class Car {
 //    private String color;
 
 
-
-
-
-
     ///Concept of  user defined data type
 
     //we have introduced a super data type of type car hat has got 5 fields
@@ -263,12 +259,11 @@ public class Car {
     //so both state and behaviour are part of the class
 
 
-
     // Why we need getters and setters???
 
     //example
 
-     // we can do some validation like this
+    // we can do some validation like this
 
 //    public void setModel(String model) {
 
@@ -299,7 +294,6 @@ public class Car {
     // so only if what was passed to us equal ferrari lamborghini will we allow our internal state, our internal model field to be assigned the value that's been passed to us
 
     // that might be because we got rule when we are creating our class to only define those 2 types
-
 
 
 //
@@ -334,7 +328,6 @@ public class Car {
 // the code that is creating objects, cant make invalid objects, it can create in this case , it can't assign a model number that we haven't defined as being valid in our Car class
 
 // that's the whole concept of encapsulation is we are not allowing people to access the field directly by forcing in this case to assign the model using a method , we can really make sure the data within our objects are more valid and have been validated and are correct
-
 
 
 // when we used the command new Car, we have used a constructor to create the Car Object

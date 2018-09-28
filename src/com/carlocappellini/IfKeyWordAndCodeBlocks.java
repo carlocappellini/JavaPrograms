@@ -3,13 +3,13 @@ package com.carlocappellini;
 public class IfKeyWordAndCodeBlocks {
 
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
 
-            boolean gameOver = true;
-            int score = 1000;
-            int levelCompleted = 5;
-            int bonus = 100;
+        boolean gameOver = true;
+        int score = 1000;
+        int levelCompleted = 5;
+        int bonus = 100;
 
 
 //        //use code blocks '{ }' for clearer code
@@ -21,11 +21,11 @@ public class IfKeyWordAndCodeBlocks {
 //            System.out.println("Got here ");
 //        }
 
-            if (gameOver){
-                int finalScore = score +(levelCompleted + bonus ) ;
-                finalScore += 1000;
-                System.out.println("Your final score was: " + finalScore);
-            }
+        if (gameOver) {
+            int finalScore = score + (levelCompleted + bonus);
+            finalScore += 1000;
+            System.out.println("Your final score was: " + finalScore);
+        }
 
 //
 //        boolean newGameOver = true;
@@ -34,18 +34,18 @@ public class IfKeyWordAndCodeBlocks {
 //        int newBonus = 200;
 
 
-            gameOver = true;
-            score = 10000;
-            levelCompleted = 8;
-            bonus = 200;
+        gameOver = true;
+        score = 10000;
+        levelCompleted = 8;
+        bonus = 200;
 
-            if (gameOver) {
-                int secondScore = score + (levelCompleted * bonus);
-                secondScore+= 1000;
-                System.out.println(secondScore);
-            }
+        if (gameOver) {
+            int secondScore = score + (levelCompleted * bonus);
+            secondScore += 1000;
+            System.out.println(secondScore);
         }
-
-
     }
+
+
+}
 

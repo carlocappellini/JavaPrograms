@@ -12,7 +12,7 @@ public class KeywordsAndExpressions {
 
         int highScore = 50;
 
-        if (highScore == 50);
+        if (highScore == 50) ;
         //(highScore == 50); is an expression, anything in the brackets
         System.out.println(" this is also an expression");
 

@@ -33,19 +33,20 @@ public class Vehicle2 {
         this.currentDirection = 0;
 
     }
-    public void steer(int direction){
+
+    public void steer(int direction) {
         this.currentDirection += direction;
         System.out.println("steering at " + currentDirection + " degrees");
     }
 
-    public void move(int velocity, int direction){
+    public void move(int velocity, int direction) {
         this.currentVelocity = velocity;
         this.currentDirection = direction;
 
-        System.out.println("moving at " + currentVelocity+ " mph in direction " + currentDirection);
+        System.out.println("moving at " + currentVelocity + " mph in direction " + currentDirection);
     }
 
-    public void stop( ){
+    public void stop() {
         this.currentVelocity = 0;
         this.currentDirection = 0;
     }

@@ -1,7 +1,6 @@
 package com.carlocappellini;
 
 
-
 public abstract class ListItem {
     protected ListItem nextLink = null;
     protected ListItem previousLink = null;
@@ -13,8 +12,11 @@ public abstract class ListItem {
     }
 
     abstract ListItem next();
+
     abstract ListItem setNext(ListItem item);
+
     abstract ListItem previous();
+
     abstract ListItem setPrevious(ListItem item);
 
     abstract int compareTo(ListItem item);

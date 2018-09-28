@@ -12,10 +12,9 @@ public class Button {
         this.onClickListener = onClickListener;
     }
 
-    public void onClick(){
+    public void onClick() {
         this.onClickListener.onClick(this.title);
     }
-
 
 
     public Button(String title) {

@@ -19,7 +19,7 @@ public class ReadingUserInput {
         boolean hasNextInt = scanner.hasNextInt();
 
 
-        if (hasNextInt){
+        if (hasNextInt) {
 
             int yearOfBirth = scanner.nextInt();
             scanner.nextLine();
@@ -28,16 +28,15 @@ public class ReadingUserInput {
             String name = scanner.nextLine();
             int age = 2018 - yearOfBirth;
 
-            if (age >= 0 && age <= 100){
+            if (age >= 0 && age <= 100) {
 
                 System.out.println("Your name is " + name + " , and you are " + age + " old");
-            }
-            else {
+            } else {
                 System.out.println("number not in range");
             }
 
 
-        }else{
+        } else {
             System.out.println("unable to pass year of birth");
         }
 

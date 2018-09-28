@@ -1,4 +1,5 @@
 package com.carlocappellini;
+
 import java.util.Scanner;
 
 public class Contact {

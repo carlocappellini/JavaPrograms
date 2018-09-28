@@ -36,16 +36,16 @@ public class MinimumElement {
     public static int findMin(int[] arr) {
         int minValue = arr[0];
 
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] <= minValue ){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] <= minValue) {
 //                    System.out.println("if " +arr[i]+"is less than " + minValue);
-                    minValue = arr[i];
-                }
-
+                minValue = arr[i];
             }
 
+        }
 
-        System.out.println("min number is "+minValue);
+
+        System.out.println("min number is " + minValue);
 
         return arr[minValue];
 
@@ -58,14 +58,7 @@ public class MinimumElement {
         int[] read = readIntegers(3);
 
 
-
-
         int findMin2 = findMin(read);
-
-
-
-
-
 
 
     }

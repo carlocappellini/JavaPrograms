@@ -43,7 +43,7 @@ public class Printer {
             if (this.isDuplex) {
                 pagesToPrint = (copies / 2) + (copies % 2);
 
-                if (copies ==1) {
+                if (copies == 1) {
                     this.tonerLevel = tonerLevel - tonerUsed;
                     System.out.println(pagesToPrint + " page printing");
                 }
@@ -63,7 +63,6 @@ public class Printer {
                     checkIfEmpty();
 
                 }
-
 
 
             } else {

@@ -35,7 +35,7 @@ public class YearlySalaryHourlyRate {
         }
 
         double monthlySalary = (salary / 12);
-        System.out.println("Your monthly Pay is "  + " $ " +monthlySalary);
+        System.out.println("Your monthly Pay is " + " $ " + monthlySalary);
 
         double weeklySalary = (monthlySalary / 4);
         System.out.println("Your weekly pay is " + " $ " + weeklySalary);

@@ -152,7 +152,7 @@ public class Dog extends Animal {
         );
     }
 
-    public void moveLegs(int speed){
+    public void moveLegs(int speed) {
         System.out.println("Dog.legs() legs move at " + speed);
 
     }

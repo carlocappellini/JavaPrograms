@@ -3,7 +3,6 @@ package com.carlocappellini;
 public class Classes {
 
 
-
     //Objects major characteristics = state and behavior
     //
     // State in terms of computer, might be the amount of ram it has the operating system is running, the hard drive size, the size of thr monitor etc
@@ -24,7 +23,6 @@ public class Classes {
 
     // public class Main = statement which creates a new class in Java , with capital M
     //
-
 
 
     public static void main(String[] args) {

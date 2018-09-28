@@ -39,4 +39,4 @@ public class WallFrame {
 
         System.out.println("Looking at Frame");
     }
-    }
+}

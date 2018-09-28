@@ -11,7 +11,6 @@ public class GreatestCommonDivisor {
     public static int getGreatestCommonDivisor(int first, int second) {
 
 
-
 //        ------ WITH RECURSION
 //        if(first == 0 || second == 0 ){
 //
@@ -49,20 +48,19 @@ public class GreatestCommonDivisor {
 //        return greatest;
 //    }
 
-        if( (first < 10) || (second < 10) ){
+        if ((first < 10) || (second < 10)) {
             return -1;
         }
-        int num=0;
+        int num = 0;
 
 
-        for(int i =1; i<=100; i++ )
-            if( (first % i==0) && (second % i==0) ){
+        for (int i = 1; i <= 100; i++)
+            if ((first % i == 0) && (second % i == 0)) {
                 num = i;
                 System.out.println(num);
             }
         return num;
     }
-
 
 
 }

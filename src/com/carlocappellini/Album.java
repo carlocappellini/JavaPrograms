@@ -69,8 +69,6 @@ public class Album {
 //        return null;
 
 
-
-
     public void printList(ArrayList<String> arrayList) {
 
         for (int i = 0; i < arrayList.size(); i++) {
@@ -79,8 +77,8 @@ public class Album {
         }
     }
 
-    public boolean addToPlayList(int trackNumber,LinkedList<Song> playlist ) {
-        int index = trackNumber -1;
+    public boolean addToPlayList(int trackNumber, LinkedList<Song> playlist) {
+        int index = trackNumber - 1;
 
         if ((index >= 0) && (index <= this.listOfsongs.size())) {
             playlist.add(this.listOfsongs.get(index));
@@ -90,21 +88,19 @@ public class Album {
         System.out.println("this album does not have a track " + trackNumber);
         return false;
     }
-public boolean addToPlayList(String title, LinkedList<Song> playlist){
-Song checkedSong = findSong(title);
 
-if (checkedSong != null){
-    playlist.add(checkedSong);
-return true;
+    public boolean addToPlayList(String title, LinkedList<Song> playlist) {
+        Song checkedSong = findSong(title);
 
-}
+        if (checkedSong != null) {
+            playlist.add(checkedSong);
+            return true;
 
-    System.out.println("song " + title + " is not in this album");
-return false;
-}
+        }
 
-
-
+        System.out.println("song " + title + " is not in this album");
+        return false;
+    }
 
 
 }

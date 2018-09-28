@@ -6,7 +6,6 @@ public class Couch {
     private String color;
 
 
-
     public Couch(String material, int seatSize, String color) {
         this.material = material;
         this.seatSize = seatSize;
@@ -25,7 +24,7 @@ public class Couch {
         return color;
     }
 
-    public void layInCouch (){
+    public void layInCouch() {
         System.out.println("Laying in the Couch");
 
     }
